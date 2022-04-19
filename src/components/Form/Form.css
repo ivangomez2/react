@@ -1,0 +1,38 @@
+.regForm{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap:5px;
+    
+    
+    }
+    .regForm input{
+    border: solid rgba(128, 128, 128, 0.253) 1px;
+   
+  }
+   .regForm label{
+        font-size: 15px;
+        font-weight: bold;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .regForm button {
+      margin-left: 40px;
+    }
+ 
+
+          .checkDiv{
+            display: flex;
+            align-items: center;
+            
+          }
+          .checkDiv p {
+            text-align: center;
+            margin-top: 15px;
+          }
+          .checkDiv input{
+            margin-top: 5px;
+            transform: scale(2);
+            margin-right: 10px; 
+          }
+

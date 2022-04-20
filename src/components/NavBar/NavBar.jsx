@@ -2,7 +2,7 @@ import React from "react";
 import img from "../../imgs/icon.png";
 const NavBar = () => {
   return (
-    <nav className="bg-dark mb-5">
+    <nav style={{border:" solid 1px black"}} className="bg-dark mb-5">
       <div className="container-fluid">
         <a className="navbar-brand text-light" href="#">Ecommerce</a>
         <button

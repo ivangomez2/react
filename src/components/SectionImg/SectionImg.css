@@ -1,0 +1,25 @@
+.imgText{
+    width: 45%;
+    margin: 0px;
+  }
+
+  .imgSecthead{
+     width: 50%;
+  }
+
+  .CardHorizontal{
+      width:500px;
+    
+
+  }
+
+  .SectionImgCard{
+    margin-left: -100px;
+  
+  }
+
+
+ .SectionImg__p{
+     
+     font-weight: bold;
+ }

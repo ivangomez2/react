@@ -1,8 +1,9 @@
 import React from "react";
 import img from "../../imgs/icon.png";
+import cart from "../../imgs/cart.png"
 const NavBar = () => {
   return (
-    <nav style={{border:" solid 1px black"}} className="bg-dark mb-5">
+    <nav style={{border:" solid 1px black"}} className="bg-dark mb-5 d-flex">
       <div className="container-fluid">
         <a className="navbar-brand text-light" href="#">Ecommerce</a>
         <button
@@ -35,6 +36,7 @@ const NavBar = () => {
             </li>
           </ul>
         </div>
+      <img style={{width:30}} src={cart}></img>
       </div>
     </nav>
   );

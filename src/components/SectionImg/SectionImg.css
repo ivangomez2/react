@@ -5,6 +5,7 @@
 
   .imgSecthead{
      width: 50%;
+     margin: 0 auto;
   }
 
   .CardHorizontal{
@@ -14,7 +15,7 @@
   }
 
   .SectionImgCard{
-    margin-left: -100px;
+    display: none
   
   }
 

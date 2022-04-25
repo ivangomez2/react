@@ -27,6 +27,7 @@ const Card = ({imagen,
    
   </span>
 </button>
+    <button onClick={()=> numero > 0 ? setNumero(numero - 1 ) && stockActual + 1 : alert("agrega productos")} className={` ${boton} text-dark btn badge rounded-pill`}> - </button>
     </div>
   </div>
   )

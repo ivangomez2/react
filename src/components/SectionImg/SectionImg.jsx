@@ -3,9 +3,9 @@ import "./SectionImg.css"
 const SectionImg = ({title,p,button,btnClass,pClass,img1,img2,ClassImgSect,imgSectImg}) => {
   return (
 
-    <div className={`${ClassImgSect} d-flex mt-5 justify-content-around mb-5 align-items-center`}>
+    <div className={`${ClassImgSect} d-flex mt-5 justify-content-around mb-5 align-items-center `}>
       
-        <div  className="imgSecthead">
+        <div  className="imgSecthead ">
       <img  className='shadow-lg p-3 mb-5 bg-white rounded' src={img1} />
  <div className={imgSectImg}>
     <h2>{title}</h2>

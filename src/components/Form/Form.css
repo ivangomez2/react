@@ -1,5 +1,21 @@
+@media (max-width: 801px){
+  .regForm{
+  display: flex !important;
+  flex-direction: column;
+  margin: 0 auto;
+  border: solid 2px;
+  border-radius: 150px 10px 10px 10px !important;
+  width: 400px;
+ 
+ 
+  }  
+}
+
+
+
+
 .regForm{
-    margin-top: 40px;
+    margin-top: 70px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;

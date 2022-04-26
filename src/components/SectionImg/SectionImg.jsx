@@ -19,7 +19,7 @@ const SectionImg = ({title,p,button,btnClass,pClass,img1,img2,ClassImgSect,imgSe
   </div>
   <div>
   </div>
-      <img className='shadow-lg p-3 mb-5 bg-white rounded' src={img1} />
+      <img className='mb-5' src={img1} />
   </div>
   )
 }

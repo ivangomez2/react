@@ -1,12 +1,42 @@
-.imgText{
-    width: 45%;
-    margin: 0px;
+
+@media (max-width: 890px){
+  .sectionImgClass{
+display: flex;
+flex-direction: column-reverse;
+
   }
 
   .imgSecthead{
-     width: 50%;
-     margin: 0 auto;
+
+    display: flex;
+    align-items: center; 
+    margin: 0 auto;
+    text-align: center;
   }
+
+  .SectionImg__p{
+   
+   
+   margin: 0 auto;
+   
+  }
+  .imgSecthead button{
+    margin-top:15px;
+  }
+}
+
+.sectionImgClass{
+display: flex;
+margin-top: 30px;
+justify-content: space-around;
+margin-bottom: 20px;
+align-items: center;
+
+
+}
+
+
+
 
   .CardHorizontal{
       width:500px;
@@ -21,6 +51,7 @@
 
 
  .SectionImg__p{
-     
+     width: 400px;
      font-weight: bold;
  }
+

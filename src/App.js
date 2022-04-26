@@ -8,11 +8,12 @@ import SectionImg from "./components/SectionImg/SectionImg";
 import opiniones from "../src/imgs/opiniones.png";
 import Card from "./components/Card/Card";
 import opinionesDos from"../src/imgs/haceteConocer.png"
+import pago from "../src/imgs/pago.jpg"
 function App() {
   return (
     <>
       <Main>
-        <div className="d-flex justify-content-around mt-4 ">
+        <div className="d-flex justify-content-around mt-4 header">
           <TextTitles
             claseCont={"cont-title"}
             img={iconBlack}
@@ -38,9 +39,10 @@ function App() {
           Title3={"100% 📴"}
           p3={"Adaptable a todos los dispositivos."}
         />
-        <div>
+        <div >
           <SectionImg
-            img2={opiniones}
+          img1={opiniones}
+           
             pClass={"SectionImg__p"}
             title={"Elegí el diseño que se adapte a tus necesidades"}
             p={
@@ -48,35 +50,24 @@ function App() {
             }
             btnClass={"btn btn-dark text-light"}
             button={"Escoge tu plan"}
+           
           />
-
-         <div className="sectImgMargin d-flex justify-content-evenly">
           
             <SectionImg
               imgSectImg={"CardHorizontal"}
               pClass="SectionImg__p"
               title={"Cobrar nunca fue tan fácil"}
               p={
-                "Soporte para mas de +60 medios de pago incluidos MercadoPago - Tarjetas de credito/debito - BTC. Que el medio de pago no sea excusa para tus clientes, Rapido - seguro y sin vueltas."
+                "Soporte para mas de +60 medios de pago incluidos MercadoPago - Tarjetas de credito/debito - BTC."
               }
               btnClass={"btn btn-dark text-light w-25"}
               button={"+ INFO"}
               img1={opinionesDos}
             />
-
-           <SectionImg
-              imgSectImg={"CardHorizontal"}
-              pClass="SectionImg__p"
-              title={"Cobrar nunca fue tan fácil"}
-              p={
-                "Soporte para mas de +60 medios de pago incluidos MercadoPago - Tarjetas de credito/debito - BTC. Que el medio de pago no sea excusa para tus clientes, Rapido - seguro y sin vueltas."
-              }
-              btnClass={"btn btn-dark text-light w-25"}
-              button={"+ INFO"}
-              img1={opinionesDos}
-            />
-         </div>
+  
+       
         </div>
+
         <DivBar
           Title1={"1"}
           p1={"Registrate"}

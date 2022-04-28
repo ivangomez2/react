@@ -4,6 +4,9 @@
     
 }
 
+*{margin: 0 auto;
+border-style: border-box;}
+
 @media (max-width: 800px){
     .header{
     display:flex;

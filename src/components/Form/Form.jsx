@@ -4,7 +4,7 @@ import './Form.css'
 const Form = ({formclass,text1,text2,text3,btnclass,btnText,checkboxP}) => {
    
   return (
-   <div className="bg-form mt-5 ">
+   <div className="bg-form mt-5">
     <form className={`${formclass} shadow-lg p-4 mb-5 bg-white rounded `}  action="">
           <label>{text1}</label>
           <input placeholder="Ingresá tu marca..." type="text" />

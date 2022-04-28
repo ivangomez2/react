@@ -8,11 +8,35 @@ import SectionImg from "./components/SectionImg/SectionImg";
 import opiniones from "../src/imgs/opiniones.png";
 import Card from "./components/Card/Card";
 import opinionesDos from"../src/imgs/haceteConocer.png"
-import pago from "../src/imgs/pago.jpg"
+
+import Item from "./items/Item"
+
+
 function App() {
+
+ /* const productos = [{nombre:"ivan"},{nombre:"pepe"}]
+  const [producto,getProducto] = useState ([])
+useEffect(() => {
+ 
+  const promesa = new Promise ((resolve,reject)=>{
+    resolve(productos)
+  })
+  promesa.then((res)=>
+  getProducto(res)
+  ).then(()=>{console.log(producto)}).catch((err)=>{console.log(err)})
+  
+  console.log(productos)
+  
+}, [])
+
+
+
+*/
+
   return (
     <>
       <Main>
+     
         <div className="d-flex justify-content-around mt-4 header">
           <TextTitles
             claseCont={"cont-title"}
@@ -20,7 +44,7 @@ function App() {
             titulo="Ingresá tu producto al mundo digítal"
             h1={"Creamos tu tienda online"}
             h4=" Digitalizá tu marca en muy simples pasos con diseño a tu medida."
-          />
+            />
           <Form
             formclass={"regForm"}
             text1={"Nombre"}
@@ -29,8 +53,9 @@ function App() {
             checkboxP={"¿Aceptas los T&C del servicio?"}
             btnclass={"btn btn-black text-light"}
             btnText="Registrarse"
-          />
+            />
         </div>
+        
         <DivBar
           Title1={"+300 💻"}
           p1={"Webs activas."}
@@ -50,9 +75,10 @@ function App() {
             }
             btnClass={"btn btn-dark text-light"}
             button={"Escoge tu plan"}
-           
-          />
-          
+            
+            />
+
+
             <SectionImg
               imgSectImg={"CardHorizontal"}
               pClass="SectionImg__p"
@@ -102,6 +128,9 @@ function App() {
             botonText={"Agregar"}
           />
         </div>
+
+          <Item/>     
+  
       </Main>
     </>
   );

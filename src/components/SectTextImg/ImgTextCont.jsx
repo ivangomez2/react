@@ -6,7 +6,7 @@ const ImgTextCont = () => {
   
   const contenido = [{
    
-    img: "https://i.ibb.co/Pt7NMP9/Mi-proyecto-3.png",
+    img: "https://i.ibb.co/m0fnsNx/mxp.png",
     titulo: "Elegí el diseño que se adapte a tus necesidades",
     parrafo: "Más de 100 diseños unicos para generar un producto exclusivo,personalizamos tu marca en minutos.",
     boton: "Información",

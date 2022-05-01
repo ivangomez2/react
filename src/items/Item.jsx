@@ -20,9 +20,9 @@ const Item = ({prods}) => {
       <a href="#" className="btn btn-primary">{prods.link}</a>
       <p className="card-text ">Disponibles {stockAct}</p>
       <div className="cardCartDiv">
-      <button className="badge bg-info" onClick={()=>{stock < myProds ? setStock(stock + 1): alert("Sin Stock Disponible")}} > + </button>
+      <button className="badge bg-info p-2" onClick={()=>{stock > 0 ? setStock(stock - 1):alert("agrega un prodcuto al menos")}}> - </button>
       <p className="card-text">En el carro: {Total}</p>
-      <button className="badge bg-info" onClick={()=>{stock > 0 ? setStock(stock - 1):alert("agrega un prodcuto al menos")}}> - </button>
+      <button className="badge bg-info p-2" onClick={()=>{stock < myProds ? setStock(stock + 1): alert("Sin Stock Disponible")}} > + </button>
 </div>
     </div>
   </div>

@@ -36,6 +36,7 @@ function App() {
         <DivBar
           Title1={"+300 💻"}
           p1={"Webs activas."}
+          p1Mobile={"Webs activas"}
           Title2={"4.9 ⭐"}
           p2Mobile={"Valoraciones."}
           p2={"Valoraciones positivas."}
@@ -49,9 +50,9 @@ function App() {
 
         <DivBar
           Title1={"1"}
-          p1={"Registra tu negocio"}
+          p1={"Registrate"}
           Title2={"2"}
-          p2={"Elegí tu plan"}
+          p2={"Suscribite"}
           Title3={"3"}
           p3={"Vende online"}
           TitleClass={"display-1 DivBarTitle"}

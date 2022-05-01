@@ -5,7 +5,7 @@ const ItemListContainer = () => {
   const [prods, setProds] = useState([]);
   const productos = [
     {
-      Nombre: "Subscripción Premium",
+      Nombre: "Suscripción Premium",
       Descripcion: "Paquete premium ideal para grandes empresas.",
       Stock: 3,
       link: "Ver Más...",
@@ -13,7 +13,7 @@ const ItemListContainer = () => {
     },
     {
       id: 2,
-      Nombre: "Subscripción Platino",
+      Nombre: "Suscripción Platino",
       Descripcion: "Paquete Platino ideal para grandes/medianas empresas.",
       Stock: 5,
      
@@ -21,7 +21,7 @@ const ItemListContainer = () => {
     },
     {
       id: 3,
-      Nombre: "Subscripción Bronce",
+      Nombre: "Suscripción Bronce",
       Descripcion: "Paquete Bronce ideal para quienes recién estan comenzando.",
       Stock: 2,
       link: "Ver Más...",

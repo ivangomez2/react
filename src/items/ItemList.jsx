@@ -1,21 +1,12 @@
-import React from 'react'
+import React from "react";
+import Item from "./Item";
 
-const Promesa = ({ prods, cargando }) => {
-    return (
-      <>
-        {prods.length > 0 ? (
-          prods.map((producto, index) => {
-            <>
-              <h1 key={index}>{producto.Nombre}</h1>
-              <h1 key={index}>{producto.Descripcion}</h1>
-              <h1 key={index}>{producto.Boton}</h1>
-            </>;
-          })
-        ) : (
-          <h1>{cargando}</h1>
-        )}
-      </>
-    );
-        }
-  
-export default Promesa
+const ItemList = ({prods}) => {
+  return (
+    <div className="d-flex CardsCont">
+      {prods.length > 0 ? prods.map((prod) => <Item prods={prod}/>) : <p>Cargando....</p>}
+    </div>
+  );
+};
+
+export default ItemList;

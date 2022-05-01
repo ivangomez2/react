@@ -10,7 +10,7 @@ const Card = ({imagen,
     let [numero, setNumero] = useState(0)
     
     let stockActual = Stock - numero
-    console.log(stockActual)
+  
 
   return (
     <div className="card cardStyle bg-dark" style={{width:"18rem"}}>

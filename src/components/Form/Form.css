@@ -1,16 +1,27 @@
 @media (max-width: 801px){
-
+.FormTitleClass{
+  display: block !important;
+  color: white;
+  margin-bottom: 20px;
+  width: 370px;
+  background-color: #39B8D8;
+}
   
   .regForm{
   display: flex !important;
   flex-direction: column;
   margin: 0 auto;
-  border: solid 2px;
-  border-radius: 150px 10px 10px 10px !important;
-  width: 400px;
+  border: solid 2px cornflowerblue;
+
+  width: 415px;
 
  
   }  
+
+
+  .regForm button {
+    margin-left: 0px !important;
+  }
 }
 
 
@@ -36,6 +47,7 @@
     }
     .regForm button {
       margin-left: 40px;
+      background-color: #39B8D8;
     }
  
 

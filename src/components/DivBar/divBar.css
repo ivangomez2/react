@@ -1,0 +1,45 @@
+@media (max-width:680px){
+.PClassMov{
+  display: block !important;
+  text-align: center;
+}
+
+  .PClass{
+    display: none;
+  }
+
+  .h4{
+    display: block !important;
+  }
+
+}
+
+
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+.barCont{
+background-color: #0697bb;
+
+}
+
+.DivBarTitle{
+    font-weight: 600;
+}
+
+
+
+.barCont p,h3{
+    font-weight: bold;
+    animation-duration: 3s;
+    animation-name: slidein;
+}

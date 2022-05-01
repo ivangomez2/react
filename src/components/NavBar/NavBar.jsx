@@ -6,7 +6,7 @@ import cart from "../../imgs/cart.png"
 const NavBar = () => {
 
   return (
-    <nav style={{border:" solid 1px black"}} className="bg-dark mb-5 d-flex fixed-top">
+    <nav style={{backgroundColor:"#0697bb"}} className="mb-5 d-flex fixed-top">
       <div className="container-fluid">
         <a className="navbar-brand text-light" href="#">Ecommerce</a>
         <button
@@ -40,7 +40,7 @@ const NavBar = () => {
           </ul>
         </div>
        
-  <span className="position-absolute badge rounded-pill bg-success">
+  <span className="position-absolute badge rounded-pill bg-info">
     0
     <span className="visually-hidden">unread messages</span>
       <img style={{width:30}} src={cart}></img>

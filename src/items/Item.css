@@ -1,0 +1,38 @@
+@media (max-width:980px){
+    .CardsCont{
+        display:flex;
+        flex-direction: column;
+    }
+}
+
+.card-body a{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+.card-title{
+    text-align: center;
+    color: #0697bb;
+    font-weight: 600;
+}
+
+.card-text{
+    font-weight: 500;
+    
+    text-align: center;
+}
+
+.cardCartDiv{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+    margin: 0 auto;
+}
+
+.cardCartDiv p{
+    margin-bottom: 5px;
+
+}

@@ -3,18 +3,21 @@
  margin: 0 auto;
  
  
+ 
   }  
 }
 
 .cont-title{
+  
   width: 400px;
-margin-top: 50px;}
+margin-top: 70px;}
 .cont-title img{
   width: 50px;
   margin-bottom: 20px;
 }
   .cont-title h1{
     font-weight: bolder;
+    color: #0697bb
 }
   .cont-title h4{
       line-height: 35px;

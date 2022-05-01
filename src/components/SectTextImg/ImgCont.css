@@ -1,0 +1,36 @@
+@media (max-width:790px){
+    .ImgContMedia{
+        display:flex;
+        flex-direction: column !important;
+    }
+}
+
+
+.sectImgText{
+    border: solid 1px #0697bb;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+
+.sectImgText h2{
+    color: #0697bb;
+    
+}
+
+.sectImgText p {
+    color: gray;
+    font-weight: bold;
+}
+
+.sectImgText button{
+    color: white;
+    font-weight: bold;
+    background-color: #0697BB;
+  
+}
+
+.ItemsegImg{
+    margin-top: 100px !important;
+flex-direction:row-reverse;
+}

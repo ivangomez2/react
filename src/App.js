@@ -49,7 +49,7 @@ function App() {
 
         <DivBar
           Title1={"1"}
-          p1={"Registrate"}
+          p1={"Registra tu negocio"}
           Title2={"2"}
           p2={"Elegí tu plan"}
           Title3={"3"}

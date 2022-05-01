@@ -2,10 +2,10 @@ import React from "react";
 import "./divBar.css"
 const DivBar = ({Title1, p1, p1Mobile, Title2, p2,p2Mobile, Title3, p3,p3Mobile,TitleClass,PClass}) => {
   return (
-    <div className="d-flex justify-content-around mt-5 text-light p-3 barCont text-center">
-      <div>
+    <div className="d-flex justify-content-around  text-light p-3  mt-4 barCont text-center align-items-center">
+      <div className="responsiveDivFix">
         <h3 className={TitleClass}>{Title1}</h3>
-        <p>{p1}</p>
+        <p className={`${PClass} PClassMov`}>{p1}</p>
       </div>
       <div>
         <h3 className={TitleClass} >{Title2}</h3>

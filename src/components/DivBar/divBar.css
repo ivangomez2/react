@@ -2,6 +2,7 @@
 .PClassMov{
   display: block !important;
   text-align: center;
+  width: 115px;
 }
 
   .PClass{
@@ -9,9 +10,20 @@
   }
 
   .h4{
-    display: block !important;
+    display: flex !important;
+    
   }
 
+  .responsiveDivFix{
+    margin-top: 25px;
+  }
+
+}
+
+@media (max-width:406px){
+  .responsiveDivFix{
+    margin-top: 0px;
+  }
 }
 
 

@@ -5,6 +5,9 @@
     }
 }
 
+.card-body{
+    border-top: 1px solid rgba(90, 89, 89, 0.322);
+}
 
 .card-body a{
     display: flex;
@@ -41,4 +44,31 @@
 
 .cardCartDiv a{
     margin-top: 10px;
+}
+
+.buttonItems{
+    border: solid 1px;
+    height: 40px;
+    width: 120px;
+    background-color: #0697bb;
+    color: whitesmoke;
+    font-weight:500;
+}
+.Sumar{
+    border: solid 1px rgba(0, 0, 0, 0);
+    height:38px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    margin-left: -2px;
+    color: beige;
+}
+
+.Restar{
+    border: solid 1px rgba(0, 0, 0, 0);
+    height:38px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    margin-right: -3px;
+    z-index: 3;
+    color: beige;
 }

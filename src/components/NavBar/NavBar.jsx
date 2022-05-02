@@ -1,7 +1,7 @@
 import React from "react";
 import img from "../../imgs/icon.png";
 import cart from "../../imgs/cart.png"
-
+import "./NavBar.css"
 
 const NavBar = () => {
 
@@ -40,9 +40,9 @@ const NavBar = () => {
           </ul>
         </div>
        
-  <span className="position-absolute badge rounded-pill bg-info">
+  <span className=" cartClass badge rounded-pill bg-info">
     0
-    <span className="visually-hidden">unread messages</span>
+    
       <img style={{width:30}} src={cart}></img>
   </span>
 

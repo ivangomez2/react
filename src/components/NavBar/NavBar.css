@@ -1,0 +1,51 @@
+@media (max-width:1160px){
+    .cartClass{
+        margin-left:75% !important;
+          
+        }
+}
+
+@media (max-width:940px){
+    .cartClass{
+        margin-left:70% !important;
+          
+        }
+}
+
+
+
+@media (max-width:800px){
+    .cartClass{
+        margin-left:65% !important;
+          
+        }
+}
+
+
+@media (max-width:673px){
+    .cartClass{
+        margin-left:55% !important;
+          
+        }
+}
+
+@media (max-width:529px){
+    .cartClass{
+        margin-left:45% !important;
+          
+        }
+}
+
+@media (max-width:437px){
+    .cartClass{
+        margin-left:40% !important;
+          
+        }
+}
+
+
+
+.cartClass{
+margin-left: 80%;
+  
+}

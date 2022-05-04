@@ -7,6 +7,7 @@ import DivBar from "./components/DivBar/DivBar";
 
 import ItemListContainer from "./items/ItemListContainer";
 import ImgTextCont from "./components/SectTextImg/ImgTextCont";
+import ItemDetailContainer from "./components/ItemDetail/ItemDetailContainer";
 
 function App() {
   return (
@@ -60,6 +61,8 @@ function App() {
         />
 
         <ItemListContainer />
+
+        <ItemDetailContainer/>
       </Main>
     </>
   );

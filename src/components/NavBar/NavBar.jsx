@@ -1,7 +1,7 @@
 import React from "react";
 import img from "../../imgs/icon.png";
 import cart from "../../imgs/cart.png"
-import "./NavBar.css"
+import "./ResponsiveCart.css"
 
 const NavBar = () => {
 
@@ -40,7 +40,7 @@ const NavBar = () => {
           </ul>
         </div>
        
-  <span className=" cartClass badge rounded-pill bg-info">
+  <span className=" cartClass badge rounded-pill">
     0
     
       <img style={{width:30}} src={cart}></img>

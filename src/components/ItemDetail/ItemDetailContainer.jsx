@@ -5,10 +5,7 @@ const ItemDetailContainer = () => {
 //detalle de mi prod
   const [items, setItems] = useState([]);
   const data = [
-    { Nombre: "Suscripcion Premium", Precio: "U$D" + " " + 325, img:"https://i.ibb.co/b6fjcC5/PREMIUM.png"},
-    { Nombre: "Suscripcion Platino", Precio: "U$D" + " " + 262, img:"https://i.ibb.co/frDf6s8/PLATA.png"},
-    {Nombre: "Suscripcion Bronce", Precio: "U$D" + " " + 140, img:"https://i.ibb.co/qrn41dK/BRONZ.png"}
-  ];
+    {id:1, Nombre: "Suscripcion Premium", Precio: "U$D" + " " + 325, img:"https://i.ibb.co/b6fjcC5/PREMIUM.png"}, ];
   
 
 
@@ -29,7 +26,7 @@ const ItemDetailContainer = () => {
 
   return (
     <div>
-{items.length > 0 ? (items.map((item)=>(<ItemDetail key={item.Nombre} items={item}/>))):<p>x</p>}
+{items.length > 0 ? (items.map((item)=> (<ItemDetail key={item.Nombre} items={item}/>))):<p>x</p>}
     </div>
   );
 };

@@ -2,13 +2,14 @@ import React from "react";
 import img from "../../imgs/icon.png";
 import cart from "../../imgs/cart.png"
 import "./ResponsiveCart.css"
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
 
   return (
     <nav style={{backgroundColor:"#0697bb"}} className="mb-5 d-flex fixed-top">
       <div className="container-fluid">
-        <a className="navbar-brand text-light" href="#">Ecommerce</a>
+        <NavLink to={`/`} className="navbar-brand text-light">Ecommerce</NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -23,19 +24,19 @@ const NavBar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item ">
-              <a className="nav-link active text-light" aria-current="page" href="#">
+              <NavLink to="/" className="nav-link active text-light" aria-current="page">
                 Home
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-light" href="#">
+              <NavLink to="/"  className="nav-link text-light">
                 Features
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-light" href="#">
+              <NavLink to="/"  className="nav-link text-light">
                 Pricing
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>

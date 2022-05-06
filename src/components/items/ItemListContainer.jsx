@@ -5,6 +5,7 @@ const ItemListContainer = () => {
   const [prods, setProds] = useState([]);
   const productos = [
     {
+      id:1,
       img: "https://i.ibb.co/b6fjcC5/PREMIUM.png",
       Nombre: "Suscripción Premium",
       Descripcion: "Paquete premium ideal para grandes empresas.",
@@ -13,6 +14,7 @@ const ItemListContainer = () => {
     
     },
     {
+     
       img:"https://i.ibb.co/frDf6s8/PLATA.png",
       id: 2,
       Nombre: "Suscripción Platino",
@@ -21,6 +23,7 @@ const ItemListContainer = () => {
       link: "Ver Más...",
     },
     {
+      
       id: 3,
       img:"https://i.ibb.co/qrn41dK/BRONZ.png",
       Nombre: "Suscripción Bronce",

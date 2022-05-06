@@ -68,3 +68,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+find por id 
+1) crear la ruta con el path /:id que nos permite pasar un param ej <Route path="/Prueba/:id" element={<Prueba/>}/>
+2) crear un view donde va a estar nuestro componente ej carpeta views/prueba (rafce) return (<div>  <nuestroItem/> </div>)
+3) crear un useState con valor NULL por defecto que cambiaremos mas adelante // const [idFilt, setIdFilt] = useState(null)
+4) usar el useParams id (que es lo que queremos buscar osea el parametro id)   const { id } = useParams(); // buscamos el param
+
+5) findear un array por id ej data.id, data.nombre o lo que querramos pasarle al id (paso 1) que debe ser igual a nuestro UseParams  const ProdFind = data.find((prod) => prod.id == id); 
+
+
+6)en nuestro <LINK> debemos pasarle el path /${data.id} // osea array.id (recordar asignar al string el id)

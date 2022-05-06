@@ -65,7 +65,6 @@ const Home = () => {
 
         <ItemListContainer />
 
-        <ItemDetailContainer/>
       
     </>
   )

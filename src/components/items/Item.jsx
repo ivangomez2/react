@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import {Link} from "react-router-dom"
 import "./Item.css"
 
 
@@ -23,7 +23,11 @@ const Item = ({prods}) => {
       <button style={{ backgroundColor:"#0697BB"}} className="Restar" onClick={()=>{stock > 0 ? setStock(stock - 1):alert("agrega un prodcuto al menos")}}> - </button>
       <p className="card-text buttonItems btn">En el carro: {Total}</p>
       <button style={{ backgroundColor:"#0697BB"}} className="Sumar" onClick={()=>{stock < myProds ? setStock(stock + 1): alert("Sin Stock Disponible")}} > + </button>
-      <a href="#">{prods.link}</a>
+    
+      <Link to={`/Prueba/${prods.id}`}>
+      <p>Detalle</p>
+      </Link>
+    
 </div>
      
      

@@ -1,6 +1,6 @@
 import React from "react";
-import img from "../../imgs/icon.png";
-import cart from "../../imgs/cart.png"
+import img from "../../../imgs/icon.png";
+import cart from "../../../imgs/cart.png"
 import "./ResponsiveCart.css"
 import { NavLink } from "react-router-dom";
 

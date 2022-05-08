@@ -1,5 +1,5 @@
 import React from 'react'
-import ItemDetailContainer from '../components/ItemDetail/ItemDetailContainer'
+import ItemDetailContainer from '../../components/Products/ItemDetail/ItemDetailContainer'
 
 const Prueba = () => {
   return (

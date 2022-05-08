@@ -1,0 +1,42 @@
+.ContactCont{
+    width: 350px;
+    background-image: url("../../../imgs/BackgroundForm.png");
+    border: solid 1px white;
+    border-radius: 5px;
+    margin-left: -100px;
+   
+   
+}
+
+
+
+.contactBg{
+   
+}
+
+.contactImgs{
+    height: 500px;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    margin-left: -1px;
+    background-color: #0697BB;
+    
+}
+
+.ContactCont label{
+    width: 350px;
+    font-weight: 500;
+    color: white;
+}
+
+.ContactCont input,textarea{
+    border: 1px rgba(128, 128, 128, 0.507) solid;
+    border-radius: 5px;
+    
+}
+
+.ContactCont button{
+    background-color:#0581a0 ;
+    color:white;
+}

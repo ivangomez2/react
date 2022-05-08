@@ -1,7 +1,7 @@
 import { BrowserRouter,Routes,Route } from "react-router-dom"
-import Layout from "../components/Layou/Layout"
-import Home from "../views/Home"
-import Prueba from "../views/Prueba"
+import Layout from "../components/Nav-Footer/Layout/Layout"
+import Home from "../routes/views/Home"
+import Prueba from "../routes/views/Prueba"
 
 
 const Rutas = () => {

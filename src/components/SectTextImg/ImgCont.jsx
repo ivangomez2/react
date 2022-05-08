@@ -3,7 +3,7 @@ import "./ImgCont.css";
 const ImgCont = ({ cont }) => {
   return (
     <div
-      className={` ${cont.clase} d-flex align-items-center ImgContMedia mb-5 mt-5 `}
+      className={` ${cont.clase} d-flex align-items-center ImgContMedia `}
     >
       <img className="" src={cont.img} />
       <div className="d-flex flex-column sectImgText">

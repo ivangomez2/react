@@ -4,13 +4,15 @@
         flex-direction: column !important;
     }
 }
-
+.ImgContMedia{
+    background-image: url(../../imgs/fondo.png);
+}
 
 .sectImgText{
     border: solid 1px #0697bb;
     border-radius: 5px;
     padding: 10px;
-
+    background-color: azure;
 }
 
 .sectImgText h2{

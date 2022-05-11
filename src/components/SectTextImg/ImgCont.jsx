@@ -1,15 +1,17 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./ImgCont.css";
-const ImgCont = ({ cont }) => {
+const ImgCont = ({ cont,Title,SubTitle,Button,Img,ClassCont,Display,linkShop}) => {
   return (
     <div
-      className={` ${cont.clase} d-flex align-items-center ImgContMedia `}
-    >
-      <img className="" src={cont.img} />
+      className={` ${cont?.clase} ${ClassCont} d-flex align-items-center ImgContMedia `}>
+      <img className={cont.display} src={`${cont?.img}`} />
       <div className="d-flex flex-column sectImgText">
-        <h2 className="w-75">{cont.titulo}</h2>
-        <p className="w-75">{cont.parrafo}</p>
-        <button className="btn">{cont.boton}</button>
+        <h2 className="w-75">{cont?.titulo} {Title}</h2>
+        <p className="w-75">{cont?.parrafo} {SubTitle}</p>
+        <NavLink to={`${cont.linkShop}`}>
+        <button className="btn">{cont?.boton} {Button}</button>
+        </NavLink>
       </div>
     </div>
   );

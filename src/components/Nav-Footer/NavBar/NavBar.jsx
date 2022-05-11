@@ -1,52 +1,65 @@
 import React from "react";
 import img from "../../../imgs/icon.png";
-import cart from "../../../imgs/cart.png"
-import "./ResponsiveCart.css"
+import cart from "../../../imgs/cart.png";
+import "./ResponsiveCart.css";
 import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
-
   return (
-    <nav style={{backgroundColor:"#0697bb"}} className="mb-5 d-flex fixed-top">
+    <nav
+      style={{ backgroundColor: "#0697bb" }}
+      className="navbar navbar-expand-lg navbar-dark fixed-top"
+    >
       <div className="container-fluid">
-        <NavLink to={`/`} className="navbar-brand text-light">Ecommerce</NavLink>
+        <NavLink to={`/`} className="navbar-brand text-light">
+          Ecommerce
+        </NavLink>
+        <span className=" cartClass badge">
+            0<img  style={{ width: 30 }} src={cart}></img>
+          </span>
         <button
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
-          >
-          <span className="navbar-toggler-icon color-white m-10 text-center"><img className="w-100" src={img} alt="" /></span>
+        >
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item ">
-              <NavLink to="/" className="nav-link active text-light" aria-current="page">
+        <div className="collapse navbar-collapse " id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
+            <li className="nav-item">
+              <NavLink to={`/`} className="navbar-brand text-light">
                 Home
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/"  className="nav-link text-light">
-                Features
+              <NavLink to={`/`} className="navbar-brand text-light">
+                Faqs
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink to="/"  className="nav-link text-light">
-                Pricing
+            <li className="nav-item dropdown">
+              <NavLink
+                to={"/"}
+                className="navbar-brand text-light"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Tienda
+                <img className="iconImgNav" src={img} alt="" />
               </NavLink>
             </li>
           </ul>
+          <form className="d-flex">
+        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button className="btn btn-outline-info text-light" type="submit">Search</button>
+      </form>
         </div>
-       
-  <span className=" cartClass badge rounded-pill">
-    0
-    
-      <img style={{width:30}} src={cart}></img>
-  </span>
-
+        
       </div>
     </nav>
   );

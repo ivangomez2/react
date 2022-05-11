@@ -24,8 +24,8 @@ const ContactUs = () => {
   return (
       <div className='ContactCont mt-5'>
     
-    <form className='d-flex flex-column p-5' ref={form} onSubmit={sendEmail}>
-        <h3 className='text-center text-light mb-3'>Contacto</h3>
+    <form className='d-flex flex-column' ref={form} onSubmit={sendEmail}>
+        <h3 className='text-center mb-3'>Contacto</h3>
       <label>Nombre</label>
       <input placeholder='Ingresa tu Nombre...' type="text" name="user_name" />
       <label>Apellido</label>

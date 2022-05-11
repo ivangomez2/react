@@ -6,6 +6,28 @@
 }
 .ImgContMedia{
     background-image: url(../../imgs/fondo.png);
+    
+}
+
+.ProductClass{
+margin-top: 100px;
+}
+
+.ImgHidden{
+    display: none !important;
+}
+
+.ImgDisplay{
+    margin-top: 50px;
+    display: flex;
+    width: 600px;
+    text-align: center;
+    border: solid 2px #0697bb !important;
+  border-width: 3px !important;
+  box-shadow: 10px 10px 32px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 32px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 32px 0px rgba(0,0,0,0.75);
+    
 }
 
 .sectImgText{

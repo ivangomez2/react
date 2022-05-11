@@ -12,7 +12,8 @@ const Item = ({prods}) => {
  let Total = stock
 
   return (
-    <div className="card mt-5" style={{width: "18rem"}}>
+    
+    <div className="card mt-5 " style={{width: "18rem"}}>
     <img className="card-img-top" src={prods.img} alt="Card image cap"/>
     <div className="card-body">
       <h4 className="card-title">{prods.Nombre}</h4>
@@ -23,8 +24,8 @@ const Item = ({prods}) => {
       <button style={{ backgroundColor:"#0697BB"}} className="Restar" onClick={()=>{stock > 0 ? setStock(stock - 1):alert("agrega un prodcuto al menos")}}> - </button>
       <p className="card-text buttonItems btn">En el carro: {Total}</p>
       <button style={{ backgroundColor:"#0697BB"}} className="Sumar" onClick={()=>{stock < myProds ? setStock(stock + 1): alert("Sin Stock Disponible")}} > + </button>
-    
-      <Link to={`/Prueba/${prods.id}`}>
+       <p>{prods.category}</p>
+      <Link to={`/Item/${prods.id}`}>
       <p>Detalle</p>
       </Link>
     

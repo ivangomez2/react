@@ -5,6 +5,15 @@
     }
 }
 
+.gridCards{
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    margin-top: 10px;
+    gap: 100px;
+    
+    
+}
+
 .card-body{
     border-top: 1px solid rgba(90, 89, 89, 0.322);
 }

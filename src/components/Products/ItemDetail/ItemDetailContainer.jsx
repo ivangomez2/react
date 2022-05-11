@@ -8,6 +8,7 @@ const ItemDetailContainer = () => {
 
   const data = [
     {
+      category:"ecommerce",
       id: 1,
       Nombre: "Suscripcion Premium",
       Descripcion:
@@ -22,6 +23,7 @@ const ItemDetailContainer = () => {
       img: "https://i.ibb.co/b6fjcC5/PREMIUM.png",
     },
     {
+      category:"ecommerce",
       id: 2,
       Nombre: "Suscripcion Platino",
       Descripcion:
@@ -35,6 +37,7 @@ const ItemDetailContainer = () => {
       img: "https://i.ibb.co/frDf6s8/PLATA.png",
     },
     {
+      category:"ecommerce",
       id: 3,
       Nombre: "Suscripcion Bronze",
       Descripcion:
@@ -47,6 +50,38 @@ const ItemDetailContainer = () => {
       Precio: "U$D" + " " + 140,
       img: "https://i.ibb.co/qrn41dK/BRONZ.png",
     },
+
+    {
+      category:"service",
+      id: 4,
+      img:"https://picsum.photos/200",
+      Nombre: "Marketing Digital",
+      Descripcion: "Servicio de marketing para tu tienda virtual, te hacemos notar",
+      Stock: 1,
+      link: "Ver Más...",
+      
+    },
+    {
+      category:"service",
+      id: 5,
+      img:"https://picsum.photos/200",
+      Nombre: "SEO service",
+      Descripcion: "Aparece entre los mejores,Una busqueda puede ser la diferencia",
+      Stock: 2,
+      link: "Ver Más...",
+      
+    },
+    {
+      category:"service",
+      id: 6,
+      img:"https://picsum.photos/200",
+      Nombre: "MEDIA service",
+      Descripcion: "Cambiamos tu web,Renovate con nuestro servicio de multimedia.",
+      Stock: 1,
+      link: "Ver Más...",
+      
+    },
+
   ];
 
   const { id } = useParams(); // buscamos el param
@@ -70,8 +105,8 @@ const ItemDetailContainer = () => {
       {idFilt ? (
         <ItemDetail idFilt={idFilt} />
       ) : (
-        <div class="spinner-grow text-info d-flex text-center" role="status">
-          <span class="sr-only">Loading...</span>
+        <div className="spinner-grow text-info d-flex text-center" role="status">
+          <span className="sr-only">Loading...</span>
         </div>
       )}
     </div>

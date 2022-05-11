@@ -2,13 +2,14 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import iconBlack from "../../imgs/iconBlack.png";
 import "../../components/Forms/ContactForm/Contact.css";
-import ItemListContainer from "../../components/Products/items/ItemListContainer";
+
 
 import ImgTextCont from "../../components/SectTextImg/ImgTextCont";
 import DivBar from "../../components/DivBar/DivBar";
 import TextTitles from "../../components/Text-titles/TextTitles";
 import Form from "../../components/Forms/RegisterForm/Form";
 import ContactUs from "../../components/Forms/ContactForm/Contact";
+import ItemListContainer from "../../components/Products/items/ItemListContainer";
 
 const Home = () => {
   return (
@@ -62,22 +63,28 @@ const Home = () => {
 
       <div className="d-flex align-items-center contactBg">
         <div className="contactImgs">
+          <NavLink to={"/Services/"}>
           <img
             style={{ width: "13em", marginBottom: "20px", borderRadius: "20%" }}
-            class="card-img-top"
+            className="card-img-top imgOne"
             src="https://i.ibb.co/BGQ705B/My-project-1.png"
             alt="Card image cap"
           />
+          </NavLink>
           <img
             style={{ width: "13em", marginBottom: "20px", borderRadius: "50%" }}
-            class="card-img-top"
+            className="card-img-top imgTwo"
             src="https://i.ibb.co/FhDVg8w/redes.png"
             alt=""
           />
         </div>
      
         <ContactUs />
+          
       </div>
+      
+        <ItemListContainer/>
+        
     </>
   );
 };

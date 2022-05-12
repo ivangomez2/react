@@ -31,25 +31,22 @@ const NavBar = () => {
         <div className="collapse navbar-collapse " id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
             <li className="nav-item">
-              <NavLink to={`/`} className="navbar-brand text-light">
-                Home
+              <NavLink to={`/Services/MarketShop`} className="navbar-brand text-light">
+                Tienda
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to={`/`} className="navbar-brand text-light">
-                Faqs
+              <NavLink to={`/Category/ecommerce`} className="navbar-brand text-light">
+                EcoPass
               </NavLink>
             </li>
-            <li className="nav-item dropdown">
+            <li className="nav-item">
               <NavLink
-                to={"/"}
+                to={"/Category/service"}
                 className="navbar-brand text-light"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+               
               >
-                Tienda
+                Servicios Adicionales
                 <img className="iconImgNav" src={img} alt="" />
               </NavLink>
             </li>

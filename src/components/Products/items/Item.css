@@ -69,7 +69,7 @@
     margin-bottom: 5px;
     border-radius: 3px;
     margin-left: -2px;
-    color: beige;
+    color: rgb(13, 135, 206);
 }
 
 .Restar{
@@ -79,5 +79,5 @@
     border-radius: 3px;
     margin-right: -3px;
     z-index: 3;
-    color: beige;
+    color: rgb(15, 188, 201);
 }

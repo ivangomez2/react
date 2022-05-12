@@ -16,7 +16,6 @@ const Item = ({prods}) => {
       <h4 className="card-title">{prods.Nombre}</h4>
       <p className="card-text" style={{color:"gray"}}>{prods.Descripcion}</p>
       <div className="cardCartDiv">
-    <ItemCount prods={prods}/>
     
       <Link to={`/Item/${prods.id}`}>
       <p>Detalle</p>

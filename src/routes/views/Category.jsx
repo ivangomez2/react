@@ -12,8 +12,7 @@ const Category = () => {
 
   const { category } = useParams(); // buscamos el param
   const ProdFind = data.filter((prod) => prod.category == category); //usamos find para buscar el id de data que coincida con el useParams
-console.log(ProdFind)
-  console.log(category)
+
   //rellenamos el useState con el ID
 
   useEffect(() => {

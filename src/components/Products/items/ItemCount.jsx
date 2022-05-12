@@ -19,15 +19,16 @@ const ItemCount = ({handleClick,stock}) => {
     <>
     <Link to="" onClick={() => handleClick(cantidad)}  className="btn btn-success w-100 text-light">Añadir a la cesta</Link>
 
+    <div className="d-flex">
     <p className="text-dark text-center fs-5"> 
-    <i onClick={decrease}  className="text-ligth">-</i>
-      La cantidad es {cantidad}      
-      <i onClick={increase} className="text-ligth">+</i> 
+    <button onClick={decrease}  className="Restar">-</button>
+      Estas llevando {cantidad}     
+      <button onClick={increase} className="Sumar ">+</button> 
       </p>
 
 
-    </>
-
+      </div>
+      </>
   )
 }
 

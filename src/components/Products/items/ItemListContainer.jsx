@@ -2,6 +2,10 @@ import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import "./Item.css"
 import { data } from "../../../config";
+import ItemCount from "./ItemCount";
+import { Link } from "react-router-dom";
+import ItemDetailContainer from "../ItemDetail/ItemDetailContainer";
+
 const ItemListContainer = ({productos}) => {
   const [prods, setProds] = useState([]);
   
@@ -23,6 +27,8 @@ const ItemListContainer = ({productos}) => {
 
   return (
     <div className="gridCards">
+
+
       <ItemList  prods={prods} />
     </div>
   );

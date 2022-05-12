@@ -82,8 +82,7 @@ const Home = () => {
         <ContactUs />
           
       </div>
-      
-        <ItemListContainer/>
+
         
     </>
   );

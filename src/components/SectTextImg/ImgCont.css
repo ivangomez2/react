@@ -18,39 +18,39 @@ margin-top: 100px;
 }
 
 .ImgDisplay{
-    margin-top: 50px;
-    display: flex;
-    width: 600px;
-    text-align: center;
-    border: solid 2px #0697bb !important;
-  border-width: 3px !important;
-  box-shadow: 10px 10px 32px 0px rgba(0,0,0,0.75);
--webkit-box-shadow: 10px 10px 32px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 10px 10px 32px 0px rgba(0,0,0,0.75);
+ margin-top: 50px;
+ width: 600px;  
+ background-color: #f5f8f880 !important;
+ text-align: center;
+background: none;
     
 }
 
 .sectImgText{
-    border: solid 1px #0697bb;
-    border-radius: 5px;
+    
+    
     padding: 10px;
-    background-color: azure;
+   
+    border-radius:0px 10px 10px 0px;
+    -webkit-box-shadow: 4px -5px 15px 2px #B0DEFF; 
+box-shadow: 4px -5px 15px 2px #cfdee9;
 }
 
 .sectImgText h2{
-    color: #0697bb;
-    
+    color: #0bb6e0;
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
-
 .sectImgText p {
-    color: gray;
+    color: rgba(110, 110, 110, 0.705);
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
 
 .sectImgText button{
     color: white;
-    font-weight: bold;
-    background-color: #0697BB;
+    font-weight: 700;
+    background-color: #0697bbb9;
+    
   
 }
 

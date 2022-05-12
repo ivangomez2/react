@@ -13,7 +13,7 @@ const Services = () => {
 <div class="content">
   <h1>Servicios</h1>
 <ProductCont/>
-<ItemDetailContainer/>
+
     </div>
 </div>
 

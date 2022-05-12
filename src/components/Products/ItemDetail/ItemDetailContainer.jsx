@@ -21,6 +21,7 @@ const ItemDetailContainer = () => {
       Caracteristicas6: "Dominio y hosting GRATUITOS por 1 año",
       Precio: "U$D" + " " + 325,
       img: "https://i.ibb.co/b6fjcC5/PREMIUM.png",
+      stock:3
     },
     {
       category:"ecommerce",
@@ -35,6 +36,7 @@ const ItemDetailContainer = () => {
       Caracteristicas5: "Dominio y hosting GRATUITOS por 1 año",
       Precio: "U$D" + " " + 262,
       img: "https://i.ibb.co/frDf6s8/PLATA.png",
+      stock:3
     },
     {
       category:"ecommerce",
@@ -49,6 +51,7 @@ const ItemDetailContainer = () => {
       Caracteristicas5: "Dominio y hosting GRATUITOS por 1 año",
       Precio: "U$D" + " " + 140,
       img: "https://i.ibb.co/qrn41dK/BRONZ.png",
+      stock:3
     },
 
     {
@@ -59,6 +62,7 @@ const ItemDetailContainer = () => {
       Descripcion: "Servicio de marketing para tu tienda virtual, te hacemos notar",
       Stock: 1,
       link: "Ver Más...",
+      stock:3
       
     },
     {
@@ -69,6 +73,7 @@ const ItemDetailContainer = () => {
       Descripcion: "Aparece entre los mejores,Una busqueda puede ser la diferencia",
       Stock: 2,
       link: "Ver Más...",
+      stock:3
       
     },
     {
@@ -79,6 +84,7 @@ const ItemDetailContainer = () => {
       Descripcion: "Cambiamos tu web,Renovate con nuestro servicio de multimedia.",
       Stock: 1,
       link: "Ver Más...",
+      stock:3
       
     },
 

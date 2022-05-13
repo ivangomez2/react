@@ -31,7 +31,7 @@ const NavBar = () => {
         <div className="collapse navbar-collapse " id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
             <li className="nav-item">
-              <NavLink to={`/Services/MarketShop`} className="navbar-brand text-light">
+              <NavLink to={`/Services/`} className="navbar-brand text-light">
                 Tienda
               </NavLink>
             </li>

@@ -47,7 +47,7 @@ const ProductCont = () => {
   }, []);
 
   return (
-    <div>
+    <div className="background">
       <ImgText cont={cont} />
     </div>
   );

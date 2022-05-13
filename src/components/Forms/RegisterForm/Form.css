@@ -26,7 +26,6 @@
 
 
 
-
 .regForm{
     margin-top: 70px;
     display: grid;
@@ -36,6 +35,8 @@
     color: white;
     background-image: url("https://css.gov.ar/wp-content/uploads/2021/11/Diseno-sin-titulo-4-1080x520@2x.png");
     background-size: cover;
+    -webkit-box-shadow: 0px 0px 29px -3px #000000 !important; 
+box-shadow: 0px 0px 29px -3px #0d88cf !important;
      
     }
     .regForm input{

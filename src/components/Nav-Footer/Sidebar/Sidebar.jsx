@@ -11,8 +11,12 @@ const Sidebar = () => {
   <NavLink to={"./MarketShop"}>
   <a href="#news">Tiendas</a>
   </NavLink>
+  <NavLink to={"./MarketShop"}>
   <a href="#contact">Pagos</a>
+  </NavLink>
+  <NavLink to={"./MarketShop"}>
   <a href="#about">FAQS</a>
+  </NavLink>
   <img className=' imgSideBar' src="https://i.ibb.co/F89HCFx/My-project-2.png" alt="" />
  
  <div>

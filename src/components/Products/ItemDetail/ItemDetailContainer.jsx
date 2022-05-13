@@ -115,6 +115,7 @@ const ItemDetailContainer = () => {
           <span className="sr-only">Loading...</span>
         </div>
       )}
+         
     </div>
   );
 };

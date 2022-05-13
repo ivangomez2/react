@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import ItemCount from "../items/ItemCount";
 
-const ItemDetail = ({ idFilt }) => {
+const ItemDetail = ({ idFilt , loading=true}) => {
   const [cantidadComprada, setCantidadComprada] = useState(0);
+
+  
   const quantityToAdd = (cantidad) => {
     setCantidadComprada(cantidad);
     
@@ -32,6 +34,8 @@ const ItemDetail = ({ idFilt }) => {
       ) : (
         <ItemCount handleClick={quantityToAdd} stock={idFilt.stock} />
       )}
+
+  
     </div>
   );
 };

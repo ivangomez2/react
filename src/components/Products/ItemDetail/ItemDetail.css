@@ -1,0 +1,28 @@
+.itemDetailContainer{
+    text-align: center;
+ border: solid 1px gray;
+  width: 500px;
+  background-color: white;
+  border-radius:20px;
+}
+
+
+
+.itemDetailContainer li{
+    list-style: none;
+    font-weight: 600;
+    
+}
+
+.itemDetailContainer img{
+    border-bottom: 1px solid black;
+    width: 499px;
+}
+
+.itemDetailContainer__p{
+    margin-top: 10px;
+    font-weight: 400;
+    border-bottom: solid 1px black;
+    padding: 6px;
+    margin-bottom: 7px;
+}

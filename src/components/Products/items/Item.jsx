@@ -1,24 +1,26 @@
-import React, { useState } from "react";
+import React from "react";
 import {Link} from "react-router-dom"
+
 import "./Item.css"
-import ItemCount from "./ItemCount";
+
 
 
 
 const Item = ({prods}) => {
 
+  
 
   return (
     
-    <div className="card mt-5 " style={{width: "18rem"}}>
+    <div className="card cardConts mt-5 ">
     <img className="card-img-top" src={prods.img} alt="Card image cap"/>
     <div className="card-body">
-      <h4 className="card-title">{prods.Nombre}</h4>
-      <p className="card-text" style={{color:"gray"}}>{prods.Descripcion}</p>
+      <p className="card-text" >{prods.Descripcion}</p>
+      <h5 className="card-title">{prods.Nombre}</h5>
       <div className="cardCartDiv">
     
       <Link to={`/Item/${prods.id}`}>
-      <p>Detalle</p>
+      <button className="btn btn-info">Ver más...</button>
       </Link>
     
 </div>

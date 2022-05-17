@@ -27,6 +27,9 @@ const Category = () => {
   }, []);
 
   return (
+    <div>
+    <Sidebar/>
+<div class="content">
     <div className="mt-5">
       {filtro ? (
         <ItemListContainer productos={ProdFind} />
@@ -35,6 +38,8 @@ const Category = () => {
           <span className="sr-only">Loading...</span>
         </div>
       )}
+      </div>
+    </div>
     </div>
   );
 }

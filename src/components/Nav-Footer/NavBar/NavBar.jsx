@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import img from "../../../imgs/icon.png";
 import cart from "../../../imgs/cart.png";
 import "./ResponsiveCart.css";
 import { NavLink } from "react-router-dom";
+import { cartContextCont } from "../../../context/CartContext";
 
 const NavBar = () => {
+
+  const {carrito} = useContext(cartContextCont)
+
   return (
     <nav
       style={{ backgroundColor: "#0697bb" }}
@@ -15,8 +19,9 @@ const NavBar = () => {
           Ecommerce
         </NavLink>
         <span className=" cartClass badge">
-            0<img  style={{ width: 30 }} src={cart}></img>
-          </span>
+          {carrito.length}
+          <img style={{ width: 30 }} src={cart}></img>
+        </span>
         <button
           className="navbar-toggler"
           type="button"
@@ -29,14 +34,23 @@ const NavBar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse " id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0 navSpace ">
             <li className="nav-item">
               <NavLink to={`/Services/`} className="navbar-brand text-light">
-                Tienda
+                  Información
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to={`/Category/ecommerce`} className="navbar-brand text-light">
+            <NavLink
+                to={"/Services/MarketShop"} className="navbar-brand text-light" >
+                Tienda
+              </NavLink>
+              </li>
+              <li className="nav-item">
+              <NavLink
+                to={`/Category/ecommerce`}
+                className="navbar-brand text-light"
+              >
                 EcoPass
               </NavLink>
             </li>
@@ -44,19 +58,27 @@ const NavBar = () => {
               <NavLink
                 to={"/Category/service"}
                 className="navbar-brand text-light"
-               
               >
                 Servicios Adicionales
-                <img className="iconImgNav" src={img} alt="" />
               </NavLink>
+
+            
+
+                <img className="iconImgNav" src={img} alt="" />
             </li>
           </ul>
           <form className="d-flex">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-info text-light" type="submit">Search</button>
-      </form>
+            <input
+              className="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button className="btn btn-outline-info text-light" type="submit">
+              Search
+            </button>
+          </form>
         </div>
-        
       </div>
     </nav>
   );

@@ -1,20 +1,19 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import ItemList from "./ItemList";
 import "./Item.css"
 import { data } from "../../../config";
-import ItemCount from "./ItemCount";
-import { Link } from "react-router-dom";
-import ItemDetailContainer from "../ItemDetail/ItemDetailContainer";
+import { GlobalContext } from "../../../context/GlobalStateContext";
 
 const ItemListContainer = ({productos}) => {
-  const [prods, setProds] = useState([]);
+  const {prods,setProds} = useContext(GlobalContext)
+  
   
 
   useEffect(() => {
     const promesa = new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(productos ? productos : data);
-      }, 2000);
+      }, 100);
     })
       .then((res) => {
         setProds(res);
@@ -27,9 +26,7 @@ const ItemListContainer = ({productos}) => {
 
   return (
     <div className="gridCards">
-
-
-      <ItemList  prods={prods} />
+      <ItemList prods={prods} />
     </div>
   );
 };

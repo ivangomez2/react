@@ -7,54 +7,38 @@
 
 .gridCards{
     display: grid !important;
-    grid-template-columns: 1fr 1fr 1fr !important;
+    grid-template-columns: 1fr 1fr 1fr!important;
     margin-top: 10px;
-    gap: 100px;
-    
-    
-}
-
-.card-body{
-    border-top: 1px solid rgba(90, 89, 89, 0.322);
-}
-
-.card-body a{
-    display: flex;
+    gap: 20px;
+    margin-left: 65px;
+    align-items: center;
+    justify-items: center;
     justify-content: center;
-    width: 100px;
-    margin-bottom: 15px;
-    
 }
 
-.card-title{
+.cardConts{
+    width: 270px;
     text-align: center;
-    color: #0697bb;
-    font-weight: 600;
+    opacity: 0.6;
+}
+
+.cardConts:hover{
+    transform: translateY(-20px);
+    opacity: 0.9;
 }
 
 .card-text{
     font-weight: 500;
-    
-    text-align: center;
 }
-
-.cardCartDiv{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    margin-left: 10px;
-    
+.card-title{
+    color: #0697bb;
 }
-
-.cardCartDiv p{
-    margin-bottom: 5px;
-
+.cardConts button{
+    width: 100%;
+    font-weight: 500;
+    color: white;
+    margin-top: 20px;
 }
-
-.cardCartDiv a{
-    margin-top: 10px;
-}
-
 .buttonItems{
     border: solid 1px;
     height: 40px;
@@ -69,7 +53,8 @@
     margin-bottom: 5px;
     border-radius: 3px;
     margin-left: -2px;
-    color: rgb(13, 135, 206);
+    color: rgb(221, 245, 248);
+    background-color: #0697bb;
 }
 
 .Restar{

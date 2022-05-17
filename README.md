@@ -80,3 +80,36 @@ find por id
 
 
 6)en nuestro <LINK> debemos pasarle el path /${data.id} // osea array.id (recordar asignar al string el id)
+
+
+  const [state, setState] = useState({ id,
+    Nombre,
+    category,
+    Descripcion,
+    Caracteristicas1,
+    Caracteristicas2,
+    Caracteristicas3,
+    Caracteristicas4,
+    Caracteristicas5,
+    Caracteristicas6,
+    Precio,
+    img,
+    Stock});
+
+  useEffect(() => {
+    setState(
+      id,
+      Nombre,
+      category,
+      Descripcion,
+      Caracteristicas1,
+      Caracteristicas2,
+      Caracteristicas3,
+      Caracteristicas4,
+      Caracteristicas5,
+      Caracteristicas6,
+      Precio,
+      img,
+      Stock
+    );
+  }, [Nombre]);

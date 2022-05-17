@@ -1,41 +1,56 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { cartContextCont } from "../../../context/CartContext";
+import { GlobalContext } from "../../../context/GlobalStateContext";
 import ItemCount from "../items/ItemCount";
+import "./ItemDetail.css"
 
-const ItemDetail = ({ idFilt , loading=true}) => {
-  const [cantidadComprada, setCantidadComprada] = useState(0);
+const ItemDetail = ({productos: {id,Nombre, category, Descripcion, Caracteristicas1,Caracteristicas2, Caracteristicas3, Caracteristicas4, Caracteristicas5, Caracteristicas6, Precio, img, Stock},
+}) => {
+  // usada para agregar mis productos al carro
+  const {agregarAlCarro } = useContext(cartContextCont);
+  const { cantidad, quantityToAdd, cantidadComprada } = useContext(GlobalContext);
 
-  
-  const quantityToAdd = (cantidad) => {
-    setCantidadComprada(cantidad);
-    
+  const itemCarro = {
+    id: id,
+    img: img,
+    category: category,
+    Nombre: Nombre,
+    Descripcion: Descripcion,
+    Caracteristicas1: Caracteristicas1,
+    Caracteristicas2: Caracteristicas2,
+    Caracteristicas3: Caracteristicas3,
+    Caracteristicas4: Caracteristicas4,
+    Caracteristicas5: Caracteristicas5,
+    Caracteristicas6: Caracteristicas6,
+    Precio: Precio,
+    Stock: Stock,
+    cantidad: cantidadComprada
   };
 
   return (
-    <div className="mt-5">
-      <img src={idFilt.img} />
-      <p>{idFilt.Descripcion}</p>
+    <div className="itemDetailContainer">
+      <img src={img} />
+
+      <p className="itemDetailContainer__p">{Descripcion}</p>
       <ul>
-        <li>{idFilt.Caracteristicas1}</li>
-        <li>{idFilt.Caracteristicas2}</li>
-        <li>{idFilt.Caracteristicas3}</li>
-        <li>{idFilt.Caracteristicas4}</li>
-        <li>{idFilt.Caracteristicas5}</li>
-        <li>{idFilt?.Caracteristicas6}</li>
-        <li>stock {idFilt?.stock}</li>
+        <li>{Caracteristicas1}</li>
+        <li>{Caracteristicas2}</li>
+        <li>{Caracteristicas3}</li>
+        <li>{Caracteristicas4}</li>
+      
       </ul>
 
-      <h3>{idFilt.Precio}</h3>
-      <h1>{idFilt.Nombre}</h1>
       {cantidadComprada > 0 ? (
-        <Link to={"/cart"}>
-        terminar compra
+        <Link to={"/Cart"}>
+          <button className="Sumar" onClick={() =>  agregarAlCarro(itemCarro)}>Comprar</button>
         </Link>
       ) : (
-        <ItemCount handleClick={quantityToAdd} stock={idFilt.stock} />
-      )}
-
-  
+        <ItemCount handleClick={quantityToAdd} Stock={Stock} />
+        )  }
+       
+        {cantidadComprada < 0 ?(<ItemCount handleClick={quantityToAdd} Stock={Stock} /> ) : (<p></p>)}
+       
     </div>
   );
 };

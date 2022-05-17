@@ -13,11 +13,7 @@
 margin-top: 100px;
 }
 
-.background{
-   background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20210319/pngtree-blue-pink-gradient-low-poly-abstract-geometric-background-image_588424.jpg");
-   background-repeat: no-repeat;
-   background-size: cover;
-}
+
 
 .ImgHidden{
     display: none !important;

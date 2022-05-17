@@ -3,26 +3,71 @@
     margin: 0;
     padding: 0;
     width: 240px;
-    background-color: #f1f1f1;
+    background-color: rgba(250, 232, 196, 0.349);
     position: fixed;
     height: 200%;
     overflow: auto;
   }
 
-  .imgSideBar{
-    border-left: solid 8px white;
-    margin-top: 29px;
+  
+  @keyframes slidein {
+    from {
+      margin-left: 240px;
+      width: 390%;
+      
+    }
+  
+    to {
+      margin-left: 5%;
+      width: 100px;
+    }
   }
 
+  @keyframes line {
+    0%,
+    5% {
+      transform: translate(2px, 0px);
+    }
+  
+    10% {
+      transform: translate(5px, 0px);
+    }
+  }
+
+  .SideBar__social{
+    margin-top: 16vh !important;
+    text-align: center;
+ 
+    height: 225px;
+    border-radius: 10px;
+    color: #0697BB;
+
+  }
+
+
+  .SideBar__social h5{
+    animation-duration: 4s;
+    animation-name: slidein;
+    animation-iteration-count: none;
+  }
+  
+
+  
+.SideBar__social svg{
+ margin-left: 5px;
+}
+
+
   .Chat{
-    position: fixed;
-    left: 90%;
-    top: 89%;
-    background-color: #0697BB;
-    border-radius: 5px;
-    color: wheat;
-    font-weight: 500;
     
+     margin-top: 30px;
+    background-color: #0697BB;
+    border-radius: 4px;
+    border: rebeccapurple;
+    padding: 3px;
+    color: white;
+    font-weight: 500;
+    animation: line 4s infinite;
   }
   
   /* Sidebar links */
@@ -33,18 +78,22 @@
     padding: 12px;
     text-decoration: none;
     
+    
   }
   
   
   /* Active/current link */
-  .sidebar a.active {
+   .sidebar a.active {
+    
     background-color: #0697BB !important;
-    color: white;
+    color: white !important;
+   
+   
   }
   
   /* Links on mouse-over */
   .sidebar a:hover:not(.active) {
-    background-color: #555;
+    background-color: #0697BB;
     color: white;
   }
   
@@ -62,6 +111,11 @@
       height: auto;
       position: relative;
     }
+
+    .imgSideBar{
+      display: none;
+    }
+  
     .sidebar a {float: left;}
     div.content {margin-left: 0;}
   }

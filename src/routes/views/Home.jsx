@@ -10,6 +10,7 @@ import TextTitles from "../../components/Text-titles/TextTitles";
 import Form from "../../components/Forms/RegisterForm/Form";
 import ContactUs from "../../components/Forms/ContactForm/Contact";
 import ItemListContainer from "../../components/Products/items/ItemListContainer";
+import TableItems from "../../components/Products/items/TableItems/TableItems";
 
 const Home = () => {
   return (
@@ -80,7 +81,8 @@ const Home = () => {
         </div>
      
         <ContactUs />
-          
+    
+        
       </div>
 
         

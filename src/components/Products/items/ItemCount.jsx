@@ -1,29 +1,32 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { cartContextCont } from "../../../context/CartContext";
+import { GlobalContext } from "../../../context/GlobalStateContext";
 
-const ItemCount = ({handleClick,stock}) => {
+const ItemCount = ({handleClick,Stock}) => {
+
+
+    const {cantidad,setCantidad} = useContext(GlobalContext)
     
-    const [cantidad, setCantidad] = useState(0)
-  
     const decrease =  () =>{
        cantidad > 0 ? setCantidad(cantidad - 1) : setCantidad(cantidad)
         
     }
 
     const increase =  () =>{
-        cantidad < stock ? setCantidad(cantidad + 1) : setCantidad(cantidad)
+        cantidad < Stock ? setCantidad(cantidad + 1) : setCantidad(cantidad)
     }
 
 
   return (
+   
     <>
-    <Link to="" onClick={() => handleClick(cantidad)}  className="btn btn-success w-100 text-light">Añadir a la cesta</Link>
 
     <div className="d-flex">
     <p className="text-dark text-center fs-5"> 
-    <button onClick={decrease}  className="Restar">-</button>
-      Estas llevando {cantidad}     
-      <button onClick={increase} className="Sumar ">+</button> 
+    <button onClick={decrease}  className="Restar">Eliminar</button>
+      {cantidad > 0 ? <p className="text-success"><Link to="" onClick={() => handleClick(cantidad) }  className="btn btn-success w-100 text-light">PAGAR</Link></p> : <p></p>}    
+     <button onClick={increase} className="Sumar ">Añadir al carrito 🛒</button>
       </p>
 
 

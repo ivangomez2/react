@@ -9,6 +9,17 @@ const CartContext = ({children}) => {
   const agregarAlCarro = (producto) =>{
     setCarrito([...carrito,producto])
   }
+
+  const deleteOne = (id)=>{
+    const filterData = carrito.filter(item => item.id !== id)
+    setCarrito(filterData)
+  }
+  
+  const isInCart = (id) =>{
+   return carrito.some(item => item.id === id)
+
+  }
+
   
   const deleteAll = (carrito,cantidad) =>{
     setCarrito([])
@@ -17,7 +28,7 @@ const CartContext = ({children}) => {
     }
 
   return (
-    <cartContextCont.Provider value={{carrito,agregarAlCarro,deleteAll}}>{children}</cartContextCont.Provider>
+    <cartContextCont.Provider value={{carrito,agregarAlCarro,deleteAll,deleteOne,isInCart}}>{children}</cartContextCont.Provider>
   )
 }
 

@@ -64,7 +64,7 @@ export const data = [{
       Nombre: "Suscripcion Premium",
       Descripcion:
         "Exclusivo para empresas de larga trayectoria en el mercado que quieran dar un expandirse al mundo de la tecnología.",
-      Caracteristicas1: "- +100 Productos actualizados según se requiera",
+      Caracteristicas1: "- +100 Productos actualizados",
       Caracteristicas2: "- Soporte 24/7 ¡Que nada te detenga!",
       Caracteristicas3: "- Actualización mensual sin costo",
       Caracteristicas4: "- Campaña de Ads incluida",
@@ -78,7 +78,7 @@ export const data = [{
       Nombre: "Suscripcion Platino",
       Descripcion:
         "Para cliente exigentes, el plan adecuado crea la tienda a tu medida con diseños precargados.",
-      Caracteristicas1: "• +30 Productos actualizados según se requiera",
+      Caracteristicas1: "• +30 Productos actualizados",
       Caracteristicas2: "• Soporte 24/7 ¡Que nada te detenga!",
       Caracteristicas3: "• Actualización mensual por 30 U$D",
       Caracteristicas4: "• Campaña de Ads NO incluida (Consultar Disponibilidad)",
@@ -92,11 +92,10 @@ export const data = [{
       Nombre: "Suscripcion Bronze",
       Descripcion:
         "Para cliente exigentes, el plan adecuado crea la tienda a tu medida con diseños precargados.",
-      Caracteristicas1: "• +30 Productos actualizados según se requiera",
+      Caracteristicas1: "• +30 Productos actualizados",
       Caracteristicas2: "• Soporte 24/7 ¡Que nada te detenga!",
       Caracteristicas3: "• Actualización mensual por 30 U$D",
       Caracteristicas4: "• Campaña de Ads NO incluida (Consultar Disponibilidad)",
-      
       Precio: "U$D" + " " + 140,
       img: "https://i.ibb.co/qrn41dK/BRONZ.png",
       Stock:6
@@ -110,8 +109,8 @@ export const data = [{
       Descripcion: "Servicio de marketing para tu tienda virtual, te hacemos notar",
       Stock: 1,
       link: "Ver Más...",
-      Stock:6
-      
+      Stock:6,
+      Precio: "U$D" + " " + 140,
     },
     {
       category:"service",
@@ -121,8 +120,8 @@ export const data = [{
       Descripcion: "Aparece entre los mejores,Una busqueda puede ser la diferencia",
       Stock: 2,
       link: "Ver Más...",
-      Stock:6
-      
+      Stock:6,
+      Precio: "U$D" + " " + 140,
     },
     {
       category:"service",
@@ -132,8 +131,8 @@ export const data = [{
       Descripcion: "Cambiamos tu web,Renovate con nuestro servicio de multimedia.",
       Stock: 1,
       link: "Ver Más...",
-      Stock:6
-      
+      Stock:6,
+      Precio: "U$D" + " " + 140,
     }];
 
     export  const contenido = [{

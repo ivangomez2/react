@@ -1,9 +1,16 @@
 .itemDetailContainer{
-    text-align: center;
- border: solid 1px gray;
-  width: 500px;
+ text-align: center;
+ 
+  width: 270px;
+  margin-top: 90px;
   background-color: white;
-  border-radius:20px;
+  
+
+}
+
+.ItemDetail__Shop button{
+width: 170px !important;
+margin-left: 30px;
 }
 
 
@@ -15,13 +22,13 @@
 }
 
 .itemDetailContainer img{
-    border-bottom: 1px solid black;
-    width: 499px;
+
+    width: 240px;
 }
 
 .itemDetailContainer__p{
     margin-top: 10px;
-    font-weight: 400;
+    font-weight: 500;
     border-bottom: solid 1px black;
     padding: 6px;
     margin-bottom: 7px;

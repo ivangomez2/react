@@ -1,10 +1,11 @@
-import React, { createContext, useContext, useEffect, useState } from 'react'
+import React, { createContext, useContext, useState } from 'react'
 import { GlobalContext } from './GlobalStateContext';
 
 export const cartContextCont = createContext("")
 const CartContext = ({children}) => {
   const [carrito,setCarrito] = useState([])
   const { setCantidad,setCantidadComprada } = useContext(GlobalContext);
+  const [precio,setPrecio] = useState(0)
 
   const agregarAlCarro = (producto) =>{
     setCarrito([...carrito,producto])
@@ -17,8 +18,9 @@ const CartContext = ({children}) => {
   
   const isInCart = (id) =>{
    return carrito.some(item => item.id === id)
-
   }
+
+  
 
   
   const deleteAll = (carrito,cantidad) =>{
@@ -28,7 +30,7 @@ const CartContext = ({children}) => {
     }
 
   return (
-    <cartContextCont.Provider value={{carrito,agregarAlCarro,deleteAll,deleteOne,isInCart}}>{children}</cartContextCont.Provider>
+    <cartContextCont.Provider value={{carrito,agregarAlCarro,deleteAll,deleteOne,isInCart,setPrecio,precio}}>{children}</cartContextCont.Provider>
   )
 }
 

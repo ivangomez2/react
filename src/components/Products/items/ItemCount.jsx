@@ -1,15 +1,17 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { cartContextCont } from "../../../context/CartContext";
 import { GlobalContext } from "../../../context/GlobalStateContext";
 
 const ItemCount = ({ handleClick, Stock, itemCarro }) => {
   const { agregarAlCarro, isInCart } = useContext(cartContextCont);
-
   const { cantidad, setCantidad } = useContext(GlobalContext);
 
+
+
   const decrease = () => {
-    cantidad > 0 ? setCantidad(cantidad - 1) : setCantidad(cantidad);
+    !cantidad > 0 && setCantidad(- 1)
+   
   };
 
   const increase = () => {
@@ -34,15 +36,10 @@ const ItemCount = ({ handleClick, Stock, itemCarro }) => {
               </Link>
             </button>
           ) : (
-            <p></p>
+           <h5>Disponible:{Stock}</h5>
           )}
-          {!isInCart(itemCarro.id)  && 
-           
-          
-            <button
-              onClick={() => agregarAlCarro({ cantidad, ...itemCarro })}
-              className="btn btn-info w-75 text-light mt-2"
-            >
+        {!isInCart(itemCarro.id)  && 
+         <button onClick={() => agregarAlCarro({ cantidad, ...itemCarro }) }  className="btn btn-info w-75 text-light mt-2">
               Añadir al carrito 🛒
             </button>
           }

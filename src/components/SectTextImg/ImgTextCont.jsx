@@ -6,18 +6,17 @@ const ImgTextCont = () => {
   const [cont,AddCont] = useState([])
 
     useEffect(() => {
-      
       const promesa = new Promise ((resolve,reject) => {
         resolve(contenido)
        }).then((res)=>AddCont(res) )
-       .catch((err)=>console.log(err))
-     
-       console.log(promesa)
-      
+       .catch((err)=>console.log(err))    
     
     }, [])
+
+
+
     
- 
+ console.log(cont)
   return (
     <div>
       <ImgText cont={cont}/>

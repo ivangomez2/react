@@ -9,10 +9,11 @@ import "./ItemDetail.css"
 const ItemDetail = ({productos: {id,Nombre, category, Descripcion, Caracteristicas1,Caracteristicas2, Caracteristicas3, Caracteristicas4, Caracteristicas5, Caracteristicas6, Precio, img, Stock},
 }) => {
   // usada para agregar mis productos al carro
-  const {agregarAlCarro,deleteAll } = useContext(cartContextCont);
-  const { cantidad, quantityToAdd, cantidadComprada } = useContext(GlobalContext);
-  
-  
+  const {agregarAlCarro,precio,setPrecio} = useContext(cartContextCont);
+
+  const { quantityToAdd, cantidadComprada } = useContext(GlobalContext);
+ 
+
 
   const itemCarro = {
     id: id,
@@ -31,13 +32,17 @@ const ItemDetail = ({productos: {id,Nombre, category, Descripcion, Caracteristic
     cantidad: cantidadComprada
   };
 
+  useEffect(()=>{
+    setPrecio(Precio)
+  })
+  
+  console.log(precio)
+
   return (
     <div>
     <Sidebar/>
 <div class="content">
-
-    
-    <div className="itemDetailContainer d-md-flex">
+    <div className="card mt-5">
      <div>
       <img src={img} />
 
@@ -52,15 +57,14 @@ const ItemDetail = ({productos: {id,Nombre, category, Descripcion, Caracteristic
       <div className="ItemDetail__Shop">
 
       {cantidadComprada > 0 ? (
-        
         <Link to={"/Cart"}>  
-          <button className="Sumar" onClick={() =>  agregarAlCarro(itemCarro)}>Comprar</button>
+          <button className="Sumar" onClick={() =>  agregarAlCarro(itemCarro)}>Ir al carro</button>
         </Link>
       ) : (
         <ItemCount itemCarro={itemCarro} handleClick={quantityToAdd} Stock={Stock} />
         )  }
        
-        {cantidadComprada < 0 ?(<ItemCount handleClick={quantityToAdd} Stock={Stock} /> ) : (<p></p>)}
+        {!cantidadComprada < 0 && (<ItemCount handleClick={quantityToAdd} Stock={Stock} /> )}
         </div>
     </div>
     </div>

@@ -5,7 +5,7 @@ const ImgText = ({cont}) => {
 
   return (
       <div>
-    {cont.length > 0 ? cont.map((conts) => <ImgCont cont={conts}/>) : <p>Cargando....</p>}
+    {cont.length > 0 ? cont.map((conts,index) => <ImgCont cont={conts} key={index}/>) : <p>Cargando....</p>}
     </div>
   )
  

@@ -8,7 +8,7 @@ const GlobalStateContext = ({children}) => {
     const [cantidadComprada, setCantidadComprada] = useState(0);
     const quantityToAdd = (cantidad) => {
       setCantidadComprada(cantidad);
-      
+     
     };
   return (
     <GlobalContext.Provider value={{prods,setProds,cantidad,setCantidad,quantityToAdd,setCantidadComprada,cantidadComprada}}>

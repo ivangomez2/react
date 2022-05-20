@@ -11,9 +11,7 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     const ReturnItem = new Promise((resolve, reject) => {
-      setTimeout(() => {
         resolve(ProdFind);
-      }, 2000);
     });
     ReturnItem.then((res) => {
       setProductos(res);

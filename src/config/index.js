@@ -4,7 +4,7 @@ export const data = [{
     img: "https://i.ibb.co/f16LDm6/pre.png",
     Nombre: "Suscripción Premium",
     Descripcion: "Paquete premium ideal para grandes empresas.",
-    Stock: 3,
+    Stock: 1,
     link: "Ver Más...",
   
   },
@@ -14,7 +14,7 @@ export const data = [{
     id: 2,
     Nombre: "Suscripción Platino",
     Descripcion: "Paquete Platino ideal para medianas empresas.",
-    Stock: 5,
+    Stock: 1,
     link: "Ver Más...",
   },
   {
@@ -23,7 +23,7 @@ export const data = [{
     img:"https://i.ibb.co/0rsVq62/starter.png",
     Nombre: "Starter Service",
     Descripcion: "Paquete Bronce ideal para tu StartUp",
-    Stock: 2,
+    Stock: 1,
     link: "Ver Más...",
     
   },
@@ -43,7 +43,7 @@ export const data = [{
     img:"https://i.ibb.co/qrn41dK/BRONZ.png",
     Nombre: "SEO service",
     Descripcion: "Aparece entre los mejores,Una busqueda puede ser la diferencia",
-    Stock: 2,
+    Stock:1 ,
     link: "Ver Más...",
     
   },
@@ -68,9 +68,9 @@ export const data = [{
       Caracteristicas2: "- Soporte 24/7 ¡Que nada te detenga!",
       Caracteristicas3: "- Actualización mensual sin costo",
       Caracteristicas4: "- Campaña de Ads incluida",
-      Precio: "U$D" + " " + 325,
+      Precio:325,
       img: "https://i.ibb.co/b6fjcC5/PREMIUM.png",
-      Stock:6
+      Stock:1
     },
     {
       category:"ecommerce",
@@ -82,9 +82,9 @@ export const data = [{
       Caracteristicas2: "• Soporte 24/7 ¡Que nada te detenga!",
       Caracteristicas3: "• Actualización mensual por 30 U$D",
       Caracteristicas4: "• Campaña de Ads NO incluida (Consultar Disponibilidad)",
-      Precio: "U$D" + " " + 262,
+      Precio: 262,
       img: "https://i.ibb.co/frDf6s8/PLATA.png",
-      Stock:6
+      Stock:1
     },
     {
       category:"ecommerce",
@@ -96,9 +96,9 @@ export const data = [{
       Caracteristicas2: "• Soporte 24/7 ¡Que nada te detenga!",
       Caracteristicas3: "• Actualización mensual por 30 U$D",
       Caracteristicas4: "• Campaña de Ads NO incluida (Consultar Disponibilidad)",
-      Precio: "U$D" + " " + 140,
+      Precio: 140,
       img: "https://i.ibb.co/qrn41dK/BRONZ.png",
-      Stock:6
+      Stock:1
     },
 
     {
@@ -109,8 +109,8 @@ export const data = [{
       Descripcion: "Servicio de marketing para tu tienda virtual, te hacemos notar",
       Stock: 1,
       link: "Ver Más...",
-      Stock:6,
-      Precio: "U$D" + " " + 140,
+      Stock:1,
+      Precio: 140,
     },
     {
       category:"service",
@@ -120,8 +120,8 @@ export const data = [{
       Descripcion: "Aparece entre los mejores,Una busqueda puede ser la diferencia",
       Stock: 2,
       link: "Ver Más...",
-      Stock:6,
-      Precio: "U$D" + " " + 140,
+      Stock:1,
+      Precio: 140,
     },
     {
       category:"service",
@@ -131,8 +131,8 @@ export const data = [{
       Descripcion: "Cambiamos tu web,Renovate con nuestro servicio de multimedia.",
       Stock: 1,
       link: "Ver Más...",
-      Stock:6,
-      Precio: "U$D" + " " + 140,
+      Stock:1,
+      Precio: 140,
     }];
 
     export  const contenido = [{
@@ -149,3 +149,4 @@ export const data = [{
       parrafo: "Soporte para mas de +60 medios de pago incluidos MercadoPago - Tarjetas de credito/debito - BTC.",
       boton: "Información",
       clase: "ItemsegImg"}]
+      

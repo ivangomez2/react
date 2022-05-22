@@ -18,10 +18,12 @@ const NavBar = () => {
         <NavLink to={`/`} className="navbar-brand text-light">
           Ecommerce
         </NavLink>
+        { carrito.length > 0 ? (
         <span className=" cartClass badge">
           {carrito.length}
           <img style={{ width: 30 }} src={cart}></img>
-        </span>
+        </span> ) : (<i> </i>)
+        }
         <button
           className="navbar-toggler"
           type="button"

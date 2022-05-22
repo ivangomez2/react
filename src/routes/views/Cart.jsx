@@ -14,7 +14,7 @@ const Cart = () => {
    let total = sumar.reduce((a, b) => Number(a) + Number(b), 0);
 
    useEffect(() => {
-     console.log("effect")
+     
     setPrecio(total)
    }, [])
     

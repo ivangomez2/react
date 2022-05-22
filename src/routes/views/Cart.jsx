@@ -1,7 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react'
-import {useHistory} from "react-router-dom"
+import {Link, useHistory} from "react-router-dom"
 import { cartContextCont } from '../../context/CartContext'
 import { GlobalContext } from '../../context/GlobalStateContext'
+
 
 const Cart = () => {
 
@@ -37,6 +38,9 @@ const Cart = () => {
         <button className='btn btn-danger text-light' onClick={deleteAll}> delete all</button>
         </div>
         <p>Precio total = {precio}</p> 
+      <Link to={"/Services/MarketShop"}>
+        <button className='btn btn-info text-light'>Seguir comprando</button>
+        </Link>
     </div>
   )
 }

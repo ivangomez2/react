@@ -32,7 +32,7 @@ const ItemCount = ({ handleClick, Stock, itemCarro }) => {
                 onClick={() => handleClick(cantidad)}
                 className="btn btn-success w-75 text-light"
               >
-                PAGAR 💸
+                Terminar Compra 💸
               </Link>
             </button>
           ) : (

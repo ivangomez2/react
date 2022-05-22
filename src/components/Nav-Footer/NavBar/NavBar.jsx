@@ -22,7 +22,7 @@ const NavBar = () => {
           <Link to={"/Cart"}>
         <span className=" cartClass badge">
           {carrito.length}
-          <img style={{ width: 30 }} src={cart}></img>
+          <img style={{ width: 30 }} src={cart}/>
         </span> </Link>) : (<i> </i>)
         }
         <button

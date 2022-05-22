@@ -29,7 +29,7 @@ const ItemCount = ({ handleClick, Stock, itemCarro }) => {
             <button className="btn btn-success p-0 w-75 text-light mt-2">
               <Link
                 to={"/cart"}
-                onClick={() => handleClick(cantidad)}
+                onClick={() => setCantidad(+1)}
                 className="btn btn-success w-75 text-light"
               >
                 Terminar Compra 💸
@@ -39,7 +39,7 @@ const ItemCount = ({ handleClick, Stock, itemCarro }) => {
            <h5>Disponible:{Stock}</h5>
           )}
         {!isInCart(itemCarro.id)  && 
-         <button onClick={() => agregarAlCarro({ cantidad, ...itemCarro }) }  className="btn btn-info w-75 text-light mt-2">
+         <button onClick={() => agregarAlCarro({ cantidad , ...itemCarro }) }  className="btn btn-info w-75 text-light mt-2">
               Añadir al carrito 🛒
             </button>
           }

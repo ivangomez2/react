@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import img from "../../../imgs/icon.png";
 import cart from "../../../imgs/cart.png";
 import "./ResponsiveCart.css";
-import { NavLink } from "react-router-dom";
+import { NavLink , Link} from "react-router-dom";
 import { cartContextCont } from "../../../context/CartContext";
 
 const NavBar = () => {
@@ -19,10 +19,11 @@ const NavBar = () => {
           Ecommerce
         </NavLink>
         { carrito.length > 0 ? (
+          <Link to={"/Cart"}>
         <span className=" cartClass badge">
           {carrito.length}
           <img style={{ width: 30 }} src={cart}></img>
-        </span> ) : (<i> </i>)
+        </span> </Link>) : (<i> </i>)
         }
         <button
           className="navbar-toggler"

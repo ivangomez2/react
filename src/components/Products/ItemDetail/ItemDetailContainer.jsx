@@ -1,24 +1,36 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router";
 import ItemDetail from "./ItemDetail";
-import { data2 } from "../../../config";
 import { db } from "../../../services/firebase";
 import { cartContextCont } from "../../../context/CartContext";
+import { collection, getDoc, getDocs } from "firebase/firestore";
 const ItemDetailContainer = () => {
   //detalle de mi prod
   const {carrito} = useContext(cartContextCont)
   const { id } = useParams(); // buscamos el param
   const [productos, setProductos] = useState([]);
-  const ProdFind = data2.find((prod) => prod.id == id); //usamos find para buscar el id de data que coincida con el useParams
+  //const ProdFind = data2.find((prod) => prod.id == id); //usamos find para buscar el id de data que coincida con el useParams
 
+  const getData = async () =>{
+    const productosDb = collection(db,"detalle")
+    try {
+      const data = await getDocs(productosDb)
+      const result = data.docs.map(doc => doc = {id:doc.id, ...doc.data()})
+       const filtrado = result.find((prod) => prod.id == id)
+       setProductos(filtrado)
+ 
+    } catch (error) {
+     console.log(error,"Error")  
+    }
+
+  }
+  
   useEffect(() => {
-    const ReturnItem = new Promise((resolve, reject) => {
-        resolve(ProdFind);
-    });
-    ReturnItem.then((res) => {
-      setProductos(res);
-    });
-  }, []);
+    getData()
+    console.log(productos)
+    
+  },[]);
+
 
   return (
     <div>

@@ -1,42 +1,17 @@
-import React, { useContext, useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { cartContextCont } from "../../../context/CartContext";
 import { GlobalContext } from "../../../context/GlobalStateContext";
 import Sidebar from "../../Nav-Footer/Sidebar/Sidebar";
 import ItemCount from "../items/ItemCount";
 import "./ItemDetail.css"
 
-const ItemDetail = ({productos: {id,Nombre, category, Descripcion, Caracteristicas1,Caracteristicas2, Caracteristicas3, Caracteristicas4, Caracteristicas5, Caracteristicas6, Precio, img, Stock},
-}) => {
+const ItemDetail = ({productos}) => {
   // usada para agregar mis productos al carro
-  const {agregarAlCarro,precio,setPrecio} = useContext(cartContextCont);
+  const {agregarAlCarro} = useContext(cartContextCont);
 
   const { quantityToAdd, cantidadComprada } = useContext(GlobalContext);
  
-
-
-  const itemCarro = {
-    id: id,
-    img: img,
-    category: category,
-    Nombre: Nombre,
-    Descripcion: Descripcion,
-    Caracteristicas1: Caracteristicas1,
-    Caracteristicas2: Caracteristicas2,
-    Caracteristicas3: Caracteristicas3,
-    Caracteristicas4: Caracteristicas4,
-    Caracteristicas5: Caracteristicas5,
-    Caracteristicas6: Caracteristicas6,
-    Precio: Precio,
-    Stock: Stock,
-    cantidad: cantidadComprada
-  };
-
-  useEffect(()=>{
-    setPrecio(Precio)
-  })
-  
-  console.log(precio)
 
   return (
     <div>
@@ -44,27 +19,27 @@ const ItemDetail = ({productos: {id,Nombre, category, Descripcion, Caracteristic
 <div class="content">
     <div className="card mt-5">
      <div>
-      <img src={img} />
+      <img src={productos.img} />
 
-      <p className="itemDetailContainer__p">{Descripcion}</p>
+      <p className="itemDetailContainer__p">{productos.descripcion}</p>
       <ul>
-        <li>{Caracteristicas1}</li>
-        <li>{Caracteristicas2}</li>
-        <li>{Caracteristicas3}</li>
-        <li>{Caracteristicas4}</li>
+        <li>{productos.descripcion1}</li>
+        <li>{productos.descripcion2}</li>
+        <li>{productos.descripcion3}</li>
+        <li>{productos.descripcion4}</li>
       </ul>
       </div>
       <div className="ItemDetail__Shop">
 
       {cantidadComprada > 0 ? (
         <Link to={"/Cart"}>  
-          <button className="Sumar" onClick={() =>  agregarAlCarro(itemCarro)}>Ir al carro</button>
+          <button className="Sumar" onClick={() =>  agregarAlCarro(productos)}>Ir al carro</button>
         </Link>
       ) : (
-        <ItemCount itemCarro={itemCarro} handleClick={quantityToAdd} Stock={Stock} />
+        <ItemCount itemCarro={productos} handleClick={quantityToAdd} Stock={productos.Stock} />
         )  }
        
-        {!cantidadComprada < 0 && (<ItemCount handleClick={quantityToAdd} Stock={Stock} /> )}
+        {!cantidadComprada < 0 && (<ItemCount handleClick={quantityToAdd} Stock={productos.Stock} /> )}
         </div>
     </div>
     </div>

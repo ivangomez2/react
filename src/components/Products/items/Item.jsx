@@ -1,37 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {Link} from "react-router-dom"
 
 import "./Item.css"
 
 
+const Item = ({state}) => {
 
 
-const Item = ({prods}) => {
-
-  
 
   return (
     
     <div className="card cardConts mt-5 ">
-    <img className="card-img-top" src={prods.img} alt="Card image cap"/>
+    <img className="card-img-top" src={state.imagen} alt="Card image cap"/>
     <div className="card-body">
-      <p className="card-text" >{prods.Descripcion}</p>
-      <h5 className="card-title">{prods.Nombre}</h5>
+      <p className="card-text" >{state.descripcion}</p>
+      <h5 className="card-title">{state.nombre}</h5>
       <div className="cardCartDiv">
     
-      <Link to={`/Item/${prods.id}`}>
+      <Link to={`/Item/${state.id}`}>
       <button className="btn btn-info">Ver más...</button>
       </Link>
     
-</div>
-     
-     
     </div>
   </div>
+</div>
   );
 }; 
 
-export default Item;
+export default React.memo(Item);
 
 
 

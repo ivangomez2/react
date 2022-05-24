@@ -113,3 +113,25 @@ find por id
       Stock
     );
   }, [Nombre]);
+
+
+
+ const getData = async () =>{
+    const productosDb = collection(db,"detalle")
+    try {
+      const data = await getDocs(productosDb)
+      const result = data.docs.map(doc => doc = {id:doc.id, ...doc.data()})
+       const filtrado = result.find((prod) => prod.id == id)
+       setProductos(filtrado)
+ 
+    } catch (error) {
+     console.log(error,"Error")  
+    }
+
+  }
+  
+  useEffect(() => {
+    getData()
+    console.log(productos)
+    
+  },[]);

@@ -6,7 +6,6 @@ const CartContext = ({children}) => {
   const [carrito,setCarrito] = useState([])
   const { setCantidad,setCantidadComprada } = useContext(GlobalContext);
   const [precio,setPrecio] = useState(0)
-
   const agregarAlCarro = (producto) =>{
     setCarrito([...carrito,producto])
   }

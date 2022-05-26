@@ -27,7 +27,7 @@ const Item = ({state}) => {
   );
 }; 
 
-export default React.memo(Item);
+export default Item;
 
 
 

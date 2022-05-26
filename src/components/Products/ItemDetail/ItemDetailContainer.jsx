@@ -1,12 +1,10 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import ItemDetail from "./ItemDetail";
 import { db } from "../../../services/firebase";
-import { cartContextCont } from "../../../context/CartContext";
 import { collection, getDoc, getDocs } from "firebase/firestore";
 const ItemDetailContainer = () => {
   //detalle de mi prod
-  const {carrito} = useContext(cartContextCont)
   const { id } = useParams(); // buscamos el param
   const [productos, setProductos] = useState([]);
   //const ProdFind = data2.find((prod) => prod.id == id); //usamos find para buscar el id de data que coincida con el useParams

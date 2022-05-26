@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import {Link, useHistory} from "react-router-dom"
+import BuyForm from '../../components/Forms/BuyerForm/BuyForm'
 import { cartContextCont } from '../../context/CartContext'
 import { GlobalContext } from '../../context/GlobalStateContext'
 
@@ -41,6 +42,7 @@ const Cart = () => {
       <Link to={"/Services/MarketShop"}>
         <button className='btn btn-info text-light'>Seguir comprando</button>
         </Link>
+        <BuyForm/>
     </div>
   )
 }

@@ -9,7 +9,7 @@ const Cart = () => {
 
     const {carrito,deleteAll,deleteOne,precio,setPrecio}= useContext(cartContextCont)
     const { cantidad } = useContext(GlobalContext);
-    
+
  //Map para recorrer cada precio
    const sumar = carrito.map((num,index)=>{return num.Precio})
 // reduce para sumar cada precio del cart

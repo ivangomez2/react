@@ -4,13 +4,22 @@ import { cartContextCont } from '../../../context/CartContext';
 
 const BuyForm = () => {
    const {carrito}= useContext(cartContextCont)
-   const [ordering,setOrder] = useState("7zUZMkm6ibYffNec5HZr")
+   const [ordering,setOrder] = useState("")
    const [formData , setFormData] = useState ({
        buyer:{email:"",nombre:"",apellido:"",telefono:""}, items:carrito
     })
 
- 
- 
+    const createTkt = (order)=>{
+      if(order){
+      alert(`tu numero de ticket es ${ordering}`)}
+    }
+   
+    useEffect(() => {
+    createTkt(ordering)
+    }, [ordering])
+    
+  
+
     const handleChange = (e) =>{
      const {name , value} = e.target
      setFormData({...formData,
@@ -19,26 +28,19 @@ const BuyForm = () => {
 }
  
     const sendOrder = (e) =>{
-    const order = {
-      buyer:{formData}, 
+      
+      const order = {
+        buyer:{formData}, 
+      }
+      const db = getFirestore();
+      const orderColl = collection(db,"ordering")
+      addDoc(orderColl,order).then(({id}) =>setOrder(id)).catch (err=>{console.log(err)})
+      console.log("creado")
+      
+      e.preventDefault();
     }
-    const db = getFirestore();
-    const orderColl = collection(db,"ordering")
-    addDoc(orderColl,order).then(({id}) =>setOrder(id)).catch (err=>{console.log(err)})
-    e.preventDefault()
-    setTimeout(() => {
-      alert (`tu numero de tkt es ${ordering}`)  
-     }, 3000);
-    console.log("creado")
-  }
-
-    const createTkt =  (e) =>{
-     
-     
-     
-   
-    }
-
+    
+    
 
   return (
     <div>

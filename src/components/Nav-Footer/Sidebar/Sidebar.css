@@ -1,3 +1,6 @@
+
+
+
 .sidebar {
     margin-top: 40px !important;
     margin: 0;
@@ -110,6 +113,12 @@
       width: 100%;
       height: auto;
       position: relative;
+      display: none;
+    }
+
+
+    .responsiveSidebar{
+      display: none;
     }
 
     .imgSideBar{

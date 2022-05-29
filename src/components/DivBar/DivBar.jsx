@@ -1,21 +1,22 @@
 import React from "react";
 import "./divBar.css"
-const DivBar = ({Title1, p1, p1Mobile, Title2, p2,p2Mobile, Title3, p3,p3Mobile,TitleClass,PClass}) => {
+const DivBar = ({Title1, p1, Title2, p2, Title3, p3,TitleClass,PClass,p1Mobile,p2Mobile,p3Mobile ,MobileClass}) => {
   return (
-    <div className="d-flex justify-content-around  text-light p-3  barCont text-center align-items-center">
-      <div className="responsiveDivFix">
+    <div className="d-flex text-light p-3  barCont text-center align-items-center">
+      <div>
         <h3 className={TitleClass}>{Title1}</h3>
-        <p className={`${PClass} PClassMov`}>{p1}</p>
+        <p className={`${PClass}`}>{p1}</p>
+        <p className={MobileClass}>{p1Mobile}</p>
       </div>
       <div>
         <h3 className={TitleClass} >{Title2}</h3>
-        <p className={`${PClass} PClassMov d-none`}>{p2Mobile}</p>
-        <p  className={`${PClass} PClass`}>{p2}</p>
+        <p  className={`${PClass}`}>{p2}</p>
+        <p className={MobileClass}>{p2Mobile}</p>
       </div>
       <div>
         <h3 className={TitleClass} >{Title3}</h3>
-        <p className={ `PClassMov d-none`}>{p3Mobile}</p>
-        <p className={`${PClass} PClass`}>{p3}</p>
+        <p className={`${PClass}`}>{p3}</p>
+        <p className={MobileClass}>{p3Mobile}</p>
       </div>
     </div>
   );

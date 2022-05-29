@@ -14,7 +14,7 @@ const ItemListContainer = ({productos}) => {
   const getData = async () =>{
     const productosDb = collection(db,"productos")
     try {
-      const data = await getDocs(productosDb)
+     const data = await getDocs(productosDb)
      const result = data.docs.map(doc => doc = {id:doc.id, ...doc.data()})
      setState(...state,result)
      console.log(result)

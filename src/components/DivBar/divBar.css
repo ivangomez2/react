@@ -1,31 +1,4 @@
-@media (max-width:680px){
-.PClassMov{
-  display: block !important;
-  text-align: center;
-  width: 115px;
-}
-
-  .PClass{
-    display: none;
-  }
-
-  .h4{
-    display: flex !important;
-    
-  }
-
-
-
-}
-
-@media (max-width:406px){
-  .responsiveDivFix{
-    margin-top: 0px;
-  }
-}
-
-
-  @keyframes slidein {
+ @keyframes slidein {
     from {
       margin-left: 100%;
       width: 300%
@@ -37,6 +10,17 @@
     }
   }
 
+@media (max-width:660px){
+  .divBar__desktopView{
+    display: none;
+  }
+
+  .divBar__mobileView{
+    display: block !important;
+  }
+  
+}
+  
 .barCont{
 background-color: #0697bb;
 
@@ -54,3 +38,7 @@ background-color: #0697bb;
     animation-name: slidein;
 }
 
+
+.divBar__mobileView{
+  display: none;
+}

@@ -1,4 +1,27 @@
+@media (max-width: 440px) {
+  .regForm {
+    width: 340px !important;
+  }
+
+  .FormTitleClass {
+    width: 300px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .regForm {
+    width: 300px !important;
+  }
+  .FormTitleClass {
+    width: 250px !important;
+  }
+}
+
 @media (max-width: 801px) {
+  .regForm {
+    margin-top: 15px !important;
+  }
+
   .FormTitleClass {
     display: block !important;
     color: white;

@@ -2,15 +2,11 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import iconBlack from "../../imgs/iconBlack.png";
 import "../../components/Forms/ContactForm/Contact.css";
-
-
 import ImgTextCont from "../../components/SectTextImg/ImgTextCont";
 import DivBar from "../../components/DivBar/DivBar";
 import TextTitles from "../../components/Text-titles/TextTitles";
 import Form from "../../components/Forms/RegisterForm/Form";
 import ContactUs from "../../components/Forms/ContactForm/Contact";
-import ItemListContainer from "../../components/Products/items/ItemListContainer";
-import TableItems from "../../components/Products/items/TableItems/TableItems";
 
 const Home = () => {
   return (
@@ -37,9 +33,11 @@ const Home = () => {
       </div>
 
       <DivBar
+      PClass={"divBar__desktopView"}
+      MobileClass={"divBar__mobileView"}
         Title1={"+300 💻"}
         p1={"Webs activas."}
-        p1Mobile={"Webs activas"}
+        p1Mobile={"Webs"}
         Title2={"4.9 ⭐"}
         p2Mobile={"Valoraciones."}
         p2={"Valoraciones positivas."}
@@ -57,7 +55,7 @@ const Home = () => {
         Title2={"2"}
         p2={"Suscribite"}
         Title3={"3"}
-        p3={"Vende online"}
+        p3={"Vende"}
         TitleClass={"display-1 DivBarTitle"}
         PClass={"h4"}
       />
@@ -65,12 +63,16 @@ const Home = () => {
       <div className="d-flex align-items-center contactBg">
         <div className="contactImgs">
           <NavLink to={"/Services/"}>
-          <img
-            style={{ width: "13em", marginBottom: "20px", borderRadius: "20%" }}
-            className="card-img-top imgOne"
-            src="https://i.ibb.co/BGQ705B/My-project-1.png"
-            alt="Card image cap"
-          />
+            <img
+              style={{
+                width: "13em",
+                marginBottom: "20px",
+                borderRadius: "20%",
+              }}
+              className="card-img-top imgOne"
+              src="https://i.ibb.co/BGQ705B/My-project-1.png"
+              alt="Card image cap"
+            />
           </NavLink>
           <img
             style={{ width: "13em", marginBottom: "20px", borderRadius: "50%" }}
@@ -79,13 +81,9 @@ const Home = () => {
             alt=""
           />
         </div>
-     
-        <ContactUs />
-    
-        
-      </div>
 
-        
+        <ContactUs />
+      </div>
     </>
   );
 };

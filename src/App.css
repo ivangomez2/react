@@ -7,18 +7,26 @@
 *{margin: 0 auto;
 border-style: border-box;}
 
-@media (max-width: 800px){
-    .header{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin:0 auto;
-    }
+.titleService{
+    width: 105% !important;
+    height:63px !important;
+    margin-top: 48px;
+    background-color:#0697bb;
+    margin-left: -20px;
+     }
 
-    .sectionImgTwo{
-        display: flex;
-        flex-direction: column !important;
+
+@media (max-width:670px){
+    .titleService{
+   width: 105% !important;
     }
 }
+
+@media (max-width: 900px){
+    .titleService{
+   width: 109% !important;
+    }
+}
+
+
 

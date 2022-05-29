@@ -4,10 +4,11 @@ import { GlobalContext } from './GlobalStateContext';
 export const cartContextCont = createContext("")
 const CartContext = ({children}) => {
   const [carrito,setCarrito] = useState([])
-  const { setCantidad,setCantidadComprada } = useContext(GlobalContext);
+  const { setCantidad,setCantidadComprada,cantidad} = useContext(GlobalContext);
   const [precio,setPrecio] = useState(0)
+  
   const agregarAlCarro = (producto) =>{
-    setCarrito([...carrito,producto])
+   cantidad > 0 ? (setCarrito([...carrito,producto])) : (alert("Debes agregar un producto"))
   }
 
   const deleteOne = (id)=>{
@@ -16,6 +17,7 @@ const CartContext = ({children}) => {
   }
   
   const isInCart = (id) =>{
+
    return carrito.some(item => item.id === id)
   }
 

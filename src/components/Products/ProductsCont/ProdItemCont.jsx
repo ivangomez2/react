@@ -1,14 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "./ProdItemCont.css"
+
+
 const ProdItemCont = ({prod}) => {
   return (
-      
+  
     <div className='ProdItem__cont'>
- 
-
-        <div className=''>
-        <img src={prod.img} alt="" />
+        <div className='prodItem__icon'>
+        <img src={prod.img} />
         </div>
       <h4>{prod.titulo}</h4>
       <p>{prod.parrafo}</p>

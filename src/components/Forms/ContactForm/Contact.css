@@ -1,87 +1,136 @@
-.ContactCont{
-    width: 500px;
-    background-color: whitesmoke;
-    border: solid 1px white;
-    border-radius: 5px;
-    margin-left: -100px;
-    -webkit-box-shadow: 5px 5px 13px 5px #000000; 
-    box-shadow: 5px 5px 13px 5px #000000;
-   
+@media (max-width: 880px) {
+  .contactImgs {
+    display: none !important;
+  }
+
+  .ContactCont {
+    margin: 100px auto !important;
+  }
 }
 
-
-
-.contactBg{
-    background: rgb(6,151,187);
-    background: linear-gradient(164deg, rgba(6,151,187,1) 1%, rgba(6,151,187,1) 31%, rgba(212,242,245,1) 49%, rgba(217,244,245,1) 79%, rgba(210,237,238,1) 91%, rgba(93,230,235,1) 97%);
-   background-repeat: no-repeat;
-   background-size: cover;
+@media (max-width: 550px) {
+  .ContactCont {
+    width: 380px !important;
+  }
 }
 
-.contactImgs{
-    height: 500px;
-    padding-top: 60px;
-    display: flex;
-    flex-direction: column;
-    margin-left: -1px;
-    background-color: #0697BB;
-   
-    
+@media (max-width: 440px) {
+  .ContactCont {
+    width: 340px !important;
+  }
+  .ContactCont input {
+    width: 310px !important;
+  }
+
+  .ContactCont textArea {
+    width: 310px !important;
+  }
+
+  .ContactCont label {
+    text-align: center;
+  }
 }
 
-.imgOne{
-    transition: transform 0.5s;
-    border-radius: 50% !important;
+@media (max-width: 380px) {
+  .ContactCont {
+    width: 300px !important;
+  }
+
+  .ContactCont label {
+    width: 300px !important;
+  }
+
+  .ContactCont input {
+    width: 280px !important;
+  }
+  .ContactCont textArea {
+    width: 280px !important;
+  }
 }
 
-.imgOne:hover{
-transform: scale(1.1);
-width: 190px !important;
-border-radius: 50% !important;
-
-border: solid 1px  rgb(43, 173, 216);
-margin-bottom: 38px !important;
-transition: transform 0.5s;
-
-
+.ContactCont {
+  width: 500px;
+  background-color: whitesmoke;
+  border: solid 1px white;
+  border-radius: 5px;
+  margin-left: -100px;
+  -webkit-box-shadow: 5px 5px 13px 5px #000000;
+  box-shadow: 5px 5px 13px 5px #000000;
 }
 
-.imgTwo{
-    transition: transform 0.5s;
-    border-radius: 50% !important;
+.contactBg {
+  background: rgb(6, 151, 187);
+  background: linear-gradient(
+    164deg,
+    rgba(6, 151, 187, 1) 1%,
+    rgba(6, 151, 187, 1) 31%,
+    rgba(212, 242, 245, 1) 49%,
+    rgba(217, 244, 245, 1) 79%,
+    rgba(210, 237, 238, 1) 91%,
+    rgba(93, 230, 235, 1) 97%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.imgTwo:hover{
-transform: scale(1.1);
-width: 190px !important;
-border-radius: 50% !important;
-border: solid 1px rgb(43, 173, 216);
-margin-bottom: 38px !important;
-transition: transform 0.5s;
-
-
+.contactImgs {
+  height: 500px;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  margin-left: -1px;
+  background-color: #0697bb;
 }
 
-.ContactCont label{
-    width: 350px;
-    font-weight: 500;
-    color: #0697BB;
- 
+.imgOne {
+  transition: transform 0.5s;
+  border-radius: 50% !important;
 }
 
-.ContactCont h3{
-    color: #0697BB;
+.imgOne:hover {
+  transform: scale(1.1);
+  width: 190px !important;
+  border-radius: 50% !important;
+
+  border: solid 1px rgb(43, 173, 216);
+  margin-bottom: 38px !important;
+  transition: transform 0.5s;
 }
 
-.ContactCont input,textarea{
-    border: 1px rgba(128, 128, 128, 0.507) solid;
-    border-radius: 5px;
-    width: 350px;
-    margin: 0 auto;
+.imgTwo {
+  transition: transform 0.5s;
+  border-radius: 50% !important;
 }
 
-.ContactCont button{
-    background-color:#0697BB ;
-    color:white;
-    font-weight: 500;
+.imgTwo:hover {
+  transform: scale(1.1);
+  width: 190px !important;
+  border-radius: 50% !important;
+  border: solid 1px rgb(43, 173, 216);
+  margin-bottom: 38px !important;
+  transition: transform 0.5s;
+}
+
+.ContactCont label {
+  width: 350px;
+  font-weight: 500;
+  color: #0697bb;
+}
+
+.ContactCont h3 {
+  color: #0697bb;
+}
+
+.ContactCont input,
+textarea {
+  border: 1px rgba(128, 128, 128, 0.507) solid;
+  border-radius: 5px;
+  width: 350px;
+  margin: 0 auto;
+}
+
+.ContactCont button {
+  background-color: #0697bb;
+  color: white;
+  font-weight: 500;
 }

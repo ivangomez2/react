@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import Footer from "../../Nav-Footer/Footer/Footer";
+import NavBar from "../../Nav-Footer/NavBar/NavBar";
 import ProductCont from "./ProductCont";
 
 
@@ -9,7 +11,7 @@ const ProductContContainer = () => {
   {   img:"https://i.ibb.co/fSST3h8/navegador.png",
       titulo: "🛒 Tienda",
       parrafo:
-        "Elegí tú plan de acuerdo a tus necesidades,recordá que mientras mejor sea el plan mejores seran los beneficios.",
+        "Elegí tú plan,recordá que mientras mejor sea el plan mejores seran los beneficios.",
       boton: "Ir ➡",
      ruta: "/Services/MarketShop"
     },
@@ -41,8 +43,9 @@ const ProductContContainer = () => {
 
   return (
     <div className="background">
+      <NavBar/>
       <ProductCont params={params} />
-      
+      <Footer/>
     </div>
   );
 };

@@ -3,10 +3,24 @@
         display:flex;
         flex-direction: column !important;
     }
+
+    .sectImgText{
+        background-color: white
+    }
+
+    .sectImgText h2{
+        font-weight: 600;
+        
+    }
+ 
 }
-.ImgContMedia{
-    background-image: url(../../imgs/fondo.png);
-    
+
+@media (max-width:440px){
+.ImgContMedia img{
+    margin-top: 30px;
+    width: 300px !important;
+  
+}
 }
 
 .ProductClass{
@@ -14,25 +28,18 @@ margin-top: 100px;
 }
 
 
-
-.ImgHidden{
-    display: none !important;
-}
-
 .ImgDisplay{
  margin-top: 50px;
  width: 600px;  
- background-color: #f5f8f880 !important;
+ background-color: #f5f8f8 !important;
  text-align: center;
 background: none;
     
 }
 
+ /*  sombra de contenedor */
 .sectImgText{
-    
-    
     padding: 10px;
-   
     border-radius:0px 10px 10px 0px;
     -webkit-box-shadow: 4px -5px 15px 2px #B0DEFF; 
 box-shadow: 4px -5px 15px 2px #cfdee9;
@@ -58,5 +65,5 @@ font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans
 
 .ItemsegImg{
     margin-top: 100px !important;
-flex-direction:row-reverse;
+    flex-direction:row-reverse;
 }

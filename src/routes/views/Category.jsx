@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import Sidebar from '../../components/Nav-Footer/Sidebar/Sidebar'
-import ItemListContainer from '../../components/Products/items/ItemListContainer'
+import "../../components/Products/items/Item.css"
 import { db } from '../../services/firebase'
 import { collection, getDocs } from 'firebase/firestore'
-import Item from '../../components/Products/items/Item'
 import ItemList from '../../components/Products/items/ItemList'
+import {Dropdown} from "react-bootstrap"
+import { NavLink } from 'react-router-dom'
 
 
 
@@ -38,8 +39,25 @@ const Category = () => {
     <Sidebar/>
 <div class="content">
     <div className="mt-5">
+ <Dropdown className='dropDownPos'>
+  <Dropdown.Toggle className='text-light' variant="info" id="dropdown-basic">
+    {category}
+  </Dropdown.Toggle>
+  <Dropdown.Menu>
+    <NavLink to={"/Services/MarketShop"}>
+    <Dropdown.Item href="#/action-1">Todos los productos</Dropdown.Item>
+    </NavLink>
+    <NavLink to={"/Category/Servicio"}>
+    <Dropdown.Item href="#/action-2">Servicios</Dropdown.Item>
+    </NavLink>
+    <NavLink to={"/Category/Suscripción"}>
+    <Dropdown.Item href="#/action-3">Suscripción</Dropdown.Item>
+    </NavLink>
+  </Dropdown.Menu>
+</Dropdown>
       {filtro ? (
-        <ItemList state={filtro} />  
+        <ItemList state={filtro} /> 
+         
       ) : (
         <div className="spinner-grow text-info d-flex text-center" role="status">
           <span className="sr-only">Loading...</span>

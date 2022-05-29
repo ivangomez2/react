@@ -3,17 +3,65 @@
         display:flex;
         flex-direction: column;
     }
+
+    
 }
 
+@media (max-width:1180px){
+    .gridCards{
+        display:grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: max-content;
+    }
+}
+@media (max-width:910px){
 .gridCards{
-    margin-top: 40px;
-    display: grid !important;
-    grid-template-columns: 1fr 1fr 1fr!important;
-    gap: 20px;
-    margin-left: 65px;
+    display:grid !important;
+    grid-template-columns: 1fr !important;
+    margin: 0 auto !important;
+
+}
+}
+
+@media(max-width:700px){
+    
+    .titleProds{
+        display: block !important;
+        text-align: center;
+        width: 115% !important;
+        margin-left: -16px;
+        background-color: #0697bb;
+        color: white;
+        margin-top: 55px;
+    }
+}
+
+.dropDownPos{
+    margin-top: 70px;
+    margin-left: 140px;
+    
+}
+
+.dropDownPos button{
+    width: 80%;
+    font-weight: 600;
+}
+
+.titleProds{
+display: none;
+}
+
+
+.gridCards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 100px;
+    margin-left: 40px;
     align-items: center;
     justify-items: center;
     justify-content: center;
+    
+    
 }
 
 .cardConts{
@@ -46,23 +94,4 @@
     background-color: #0697bb;
     color: whitesmoke;
     font-weight:500;
-}
-.Sumar{
-    border: solid 1px rgba(0, 0, 0, 0);
-    height:38px;
-    margin-bottom: 5px;
-    border-radius: 3px;
-    margin-left: -2px;
-    color: rgb(221, 245, 248);
-    background-color: #0697bb;
-}
-
-.Restar{
-    border: solid 1px rgba(0, 0, 0, 0);
-    height:38px;
-    margin-bottom: 5px;
-    border-radius: 3px;
-    margin-right: -3px;
-    z-index: 3;
-    color: rgb(15, 188, 201);
 }

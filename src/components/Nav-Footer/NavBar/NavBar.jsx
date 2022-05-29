@@ -51,7 +51,7 @@ const NavBar = () => {
               </li>
               <li className="nav-item">
               <NavLink
-                to={`/Category/ecommerce`}
+                to={`/Category/Suscripción`}
                 className="navbar-brand text-light"
               >
                 EcoPass
@@ -59,7 +59,7 @@ const NavBar = () => {
             </li>
             <li className="nav-item">
               <NavLink
-                to={"/Category/service"}
+                to={"/Category/Servicio"}
                 className="navbar-brand text-light"
               >
                 Servicios Adicionales

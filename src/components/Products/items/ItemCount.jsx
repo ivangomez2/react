@@ -7,63 +7,62 @@ const ItemCount = ({ handleClick, Stock, itemCarro }) => {
   const { agregarAlCarro, isInCart } = useContext(cartContextCont);
   const { cantidad, setCantidad } = useContext(GlobalContext);
 
+
   useEffect(() => {
-    console.log(cantidad);
+   
   }, [cantidad]);
 
-  const decrease = () => {
-    cantidad > 0
-      ? setCantidad(cantidad - 1)
-      : alert("Debes agregar un producto");
-  };
+ ///ACA ES DONDE SE SUMAN Y RESTAN LOS PRODUCTOS
 
-  const increase = () => {
-    cantidad < Stock ? setCantidad(cantidad + 1) : setCantidad(cantidad);
+  const count = (e) => {
+    //TOMO EL VALOR DEL INPUT Y LO SETEO EN LA CANTIDAD
+   setCantidad(e.target.value)
   };
 
   return (
     <>
-      <div className="d-flex">
-        <p className="text-dark text-center fs-5">
-          {!isInCart(itemCarro.id) && (
-            <button
-              onClick={decrease}
-              className="btn btn-danger w-75 text-light"
-            >
-              - 🔌
-            </button>
+      <div className="text-dark fs-5">
+        
+     <div>
+    
+    {isInCart(itemCarro.id) ? 
+    (<Link to={"/cart"} className="btn btn-success text-light"> <button className="btn btn-success text-light mt-2">Terminar Compra 💸</button> </Link>) 
+    : (<input onClick={count} type={"number"} min={"1"} max={Stock} defaultValue="1" ></input>)}
+          </div>
+          
+          {!isInCart(itemCarro.id) && 
+          (<button onClick={() => agregarAlCarro({ cantidad, ...itemCarro })}
+           className="btn itemCount text-light mt-2"> Agregar al carrito 🛒</button>
           )}
-
-          {!isInCart(itemCarro.id) && (
-            <button
-              onClick={increase}
-              className="btn btn-danger w-75 text-light"
-            >
-              + ⚡
-            </button>
-          )}
-
-          {isInCart(itemCarro.id) ? (
-            <button className="btn btn-success p-0 w-75 text-light mt-2">
-              <Link to={"/cart"} className="btn btn-success w-75 text-light">
-                Terminar Compra 💸
-              </Link>
-            </button>
-          ) : (
-            <h5>Cantidad {cantidad}</h5>
-          )}
-          {!isInCart(itemCarro.id) && (
-            <button
-              onClick={() => agregarAlCarro({ cantidad, ...itemCarro })}
-              className="btn btn-info w-75 text-light mt-2"
-            >
-              Añadir🛒
-            </button>
-          )}
-        </p>
-      </div>
+        </div>
     </>
   );
 };
 
 export default ItemCount;
+
+
+
+
+
+
+
+/*  {!isInCart(itemCarro.id) && (
+  <button onClick={decrease}className="btn itemCount text-light"> - </button>)}
+
+  {!isInCart(itemCarro.id) && (
+    <button onClick={increase} className="btn itemCount text-light">+</button>
+  )} /*/
+
+  /*  const decrease = () => {
+    cantidad > 0
+      ? setCantidad(cantidad - 1)
+      : alert("Debes agregar un producto");
+  };
+
+ const increase = () =>{
+     cantidad > 0
+      ? setCantidad(cantidad - 1)
+      : alert("Debes agregar un producto");
+ 
+ }/*/

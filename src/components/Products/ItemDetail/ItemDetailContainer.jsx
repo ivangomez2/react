@@ -6,17 +6,21 @@ import { collection, getDoc, getDocs } from "firebase/firestore";
 const ItemDetailContainer = () => {
   //detalle de mi prod
   const { id } = useParams(); // buscamos el param
+  const { category } = useParams();
   const [productos, setProductos] = useState([]);
-  //const ProdFind = data2.find((prod) => prod.id == id); //usamos find para buscar el id de data que coincida con el useParams
+  const [productosFilt, setProductosFilt] = useState([])
+
 
   const getData = async () =>{
     const productosDb = collection(db,"detalle")
     try {
       const data = await getDocs(productosDb)
       const result = data.docs.map(doc => doc = {id:doc.id, ...doc.data()})
-       const filtrado = result.find((prod) => prod.id == id)
-       setProductos(filtrado)
- 
+       const findeado = result.find((prod) => prod.id == id)
+       const filter = result.filter((item) => item.category == findeado.category)
+       setProductos(findeado)
+       setProductosFilt(filter)
+      
     } catch (error) {
      console.log(error,"Error")  
     }
@@ -33,7 +37,7 @@ const ItemDetailContainer = () => {
   return (
     <div>
       {productos ? (
-        <ItemDetail productos={productos} />
+        <ItemDetail productos={productos} productosFilt={productosFilt} />
       ) : (
         <div
           className="spinner-grow text-info d-flex text-center"

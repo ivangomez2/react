@@ -1,97 +1,97 @@
-@media (max-width:980px){
-    .CardsCont{
-        display:flex;
-        flex-direction: column;
-    }
-
-    
+.itemCont {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 20px;
 }
 
-@media (max-width:1180px){
-    .gridCards{
-        display:grid !important;
-        grid-template-columns: 1fr 1fr !important;
-        grid-template-rows: max-content;
-    }
+@media (max-width: 1180px) {
+  .itemCont {
+    grid-template-columns: 1fr 1fr;
+    margin-left: 20px;
+  }
 }
-@media (max-width:910px){
-.gridCards{
-    display:grid !important;
-    grid-template-columns: 1fr !important;
-    margin: 0 auto !important;
+@media (max-width: 840px) {
+  .itemCont {
+    grid-template-columns: 1fr;
+    margin-left: 20px;
+  }
 
-}
-}
-
-@media(max-width:700px){
-    
-    .titleProds{
-        display: block !important;
-        text-align: center;
-        width: 115% !important;
-        margin-left: -16px;
-        background-color: #0697bb;
-        color: white;
-        margin-top: 55px;
-    }
-}
-
-.dropDownPos{
-    margin-top: 70px;
-    margin-left: 140px;
-    
-}
-
-.dropDownPos button{
-    width: 80%;
+  .dropDownPos button {
+    width: 130%;
+    margin-left: -30px;
     font-weight: 600;
+  }
 }
 
-.titleProds{
-display: none;
-}
-
-
-.gridCards{
+@media (max-width: 700px) {
+  .itemCont {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 100px;
-    margin-left: 40px;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-    
-    
-}
+    grid-template-columns: 1fr 1fr;
+    margin-left: 20px;
+  }
 
-.cardConts{
-    width: 270px;
+  @media (max-width: 650px) {
+    .itemCont {
+      grid-template-columns: 1fr;
+      margin-left: 20px;
+    }
+  }
+
+  .titleProds {
+    display: block !important;
     text-align: center;
-    opacity: 0.6;
-}
-
-.cardConts:hover{
-    transform: translateY(-20px);
-    opacity: 0.9;
-}
-
-.card-text{
-    font-weight: 500;
-}
-.card-title{
-    color: #0697bb;
-}
-.cardConts button{
-    width: 100%;
-    font-weight: 500;
-    color: white;
-    margin-top: 20px;
-}
-.buttonItems{
-    border: solid 1px;
-    height: 40px;
-    width: 120px;
+    width: 115% !important;
+    margin-left: -16px;
     background-color: #0697bb;
-    color: whitesmoke;
-    font-weight:500;
+    color: white;
+    margin-top: 55px;
+  }
 }
+
+.dropDownPos {
+  margin-top: 70px;
+  margin-left: 140px;
+}
+
+.dropDownPos button {
+  width: 80%;
+  font-weight: 600;
+}
+
+.titleProds {
+  display: none;
+}
+
+.cardConts {
+  width: 270px;
+  text-align: center;
+  opacity: 0.6;
+  display: grid;
+}
+
+.cardConts:hover {
+  transform: translateY(-20px);
+  opacity: 0.9;
+}
+
+.card-text {
+  font-weight: 500;
+}
+.card-title {
+  color: #0697bb;
+}
+.cardConts button {
+  width: 100%;
+  font-weight: 500;
+  color: white;
+  margin-top: 20px;
+}
+.buttonItems {
+  border: solid 1px;
+  height: 40px;
+  width: 120px;
+  background-color: #0697bb;
+  color: whitesmoke;
+  font-weight: 500;
+}
+

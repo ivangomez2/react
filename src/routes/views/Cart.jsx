@@ -29,7 +29,7 @@ const Cart = () => {
         <div className='card-body'>
         <h1>{prod.Nombre}</h1>
         <h1> Costo total: {prod.Precio}</h1>
-        <h1>Cantidad agregada {cantidad}</h1>
+        <h1>Cantidad agregada {prod.cantidad}</h1>
         <button className='btn btn-info text-light' onClick={()=>deleteOne(prod.id)}>Borra este</button>
         </div>
         </div>)

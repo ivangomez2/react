@@ -30,7 +30,7 @@ const ItemListContainer = ({productos}) => {
   },[Category]);
 
   return (
-    <div className="gridCards">
+    <div>
     <ItemList state={state}/>
     </div>
   );

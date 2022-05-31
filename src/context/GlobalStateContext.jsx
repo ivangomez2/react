@@ -1,16 +1,17 @@
 import React, { createContext, useState } from 'react'
-//nombre de mi context
 export const GlobalContext = createContext("")
+
 const GlobalStateContext = ({children}) => {
-    //responsable de proveer info y almacenarla
-    
-    const [cantidad, setCantidad] = useState(0);
+    //ACA TENGO MI CANTIDAD
+    const [cantidad, setCantidad] = useState(1);
     const [cantidadComprada, setCantidadComprada] = useState(0);
+    
     const quantityToAdd = (cantidad) => {
       setCantidadComprada(cantidad);
-     
+      
     };
-  return (
+  
+    return (
     <GlobalContext.Provider value={{cantidad,setCantidad,quantityToAdd,setCantidadComprada,cantidadComprada}}>
     {children}
     </GlobalContext.Provider>

@@ -7,23 +7,24 @@ const CartContext = ({children}) => {
   const { setCantidad,setCantidadComprada,cantidad} = useContext(GlobalContext);
   const [precio,setPrecio] = useState(0)
   
+  //FUNCION QUE PERMITE AGREGAR SI CANTIDAD ES > A 0 
   const agregarAlCarro = (producto) =>{
-   cantidad > 0 ? (setCarrito([...carrito,producto])) : (alert("Debes agregar un producto"))
+   setCarrito([...carrito,producto])
   }
 
+  //borrar un item
   const deleteOne = (id)=>{
     const filterData = carrito.filter(item => item.id !== id)
     setCarrito(filterData)
+   
   }
   
+  //comprobar si el item está en el carro
   const isInCart = (id) =>{
-
    return carrito.some(item => item.id === id)
   }
 
-  
-
-  
+  //borrar todo
   const deleteAll = (carrito,cantidad) =>{
     setCarrito([])
     setCantidadComprada(0)

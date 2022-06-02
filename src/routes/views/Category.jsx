@@ -5,7 +5,7 @@ import "../../components/Products/items/Item.css"
 import { db } from '../../services/firebase'
 import { collection, getDocs } from 'firebase/firestore'
 import ItemList from '../../components/Products/items/ItemList'
-import {Dropdown} from "react-bootstrap"
+import {Dropdown,Spinner} from "react-bootstrap"
 import { NavLink } from 'react-router-dom'
 
 
@@ -22,17 +22,18 @@ const Category = () => {
       const result = data.docs.map(doc => doc = {id:doc.id, ...doc.data()})
        const filtrado = result.filter((prod) => prod.categoria == category)
        setFiltro(filtrado)
-  
+    
     } catch (error) {
      console.log(error,"Error")  
     }
 
   }
+
+
   
   useEffect(() => {
   getData()  
-
-  }, [filtro])
+  }, [category])
   
   return (
     <div>
@@ -55,14 +56,9 @@ const Category = () => {
     </NavLink>
   </Dropdown.Menu>
 </Dropdown>
-      {filtro ? (
+     
         <ItemList state={filtro} /> 
-         
-      ) : (
-        <div className="spinner-grow text-info d-flex text-center" role="status">
-          <span className="sr-only">Loading...</span>
-        </div>
-      )}
+ 
       </div>
     </div>
     </div>

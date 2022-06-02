@@ -7,11 +7,6 @@ const ItemCount = ({ handleClick, Stock, itemCarro }) => {
   const { agregarAlCarro, isInCart } = useContext(cartContextCont);
   const { cantidad, setCantidad } = useContext(GlobalContext);
 
-
-  useEffect(() => {
-   
-  }, [cantidad]);
-
  ///ACA ES DONDE SE SUMAN Y RESTAN LOS PRODUCTOS
 
   const count = (e) => {

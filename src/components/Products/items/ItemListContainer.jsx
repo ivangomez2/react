@@ -27,7 +27,7 @@ const ItemListContainer = ({productos}) => {
   useEffect(() => {
     getData()
    
-  },[Category]);
+  },[]);
 
   return (
     <div>

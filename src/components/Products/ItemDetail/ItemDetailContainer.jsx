@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import ItemDetail from "./ItemDetail";
 import { db } from "../../../services/firebase";
-import { collection, getDoc, getDocs } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
+import { Spinner } from "react-bootstrap";
 const ItemDetailContainer = () => {
-  //detalle de mi prod
+
+  
   const { id } = useParams(); // buscamos el param
-  const { category } = useParams();
   const [productos, setProductos] = useState([]);
   const [productosFilt, setProductosFilt] = useState([])
 
@@ -30,23 +31,11 @@ const ItemDetailContainer = () => {
   useEffect(() => {
     getData()
     console.log(productos)
-    
-  },[]);
+  },[id]);
 
 
   return (
-    <div>
-      {productos ? (
-        <ItemDetail productos={productos} productosFilt={productosFilt} />
-      ) : (
-        <div
-          className="spinner-grow text-info d-flex text-center"
-          role="status"
-        >
-          <span className="sr-only">Loading...</span>
-        </div>
-      )}
-    </div>
+    <div> <ItemDetail productos={productos} productosFilt={productosFilt} /> </div>
   );
 };
 

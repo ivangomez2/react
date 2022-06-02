@@ -10,6 +10,7 @@ const ItemDetail = ({ productos, productosFilt }) => {
   // usada para agregar mis productos al carr
   const { quantityToAdd, cantidad, setCantidad } = useContext(GlobalContext);
 
+
   return (
     <>
       <Sidebar />

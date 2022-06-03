@@ -33,6 +33,7 @@ const Category = () => {
   
   useEffect(() => {
   getData()  
+  
   }, [category])
   
   return (

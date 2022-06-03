@@ -7,9 +7,9 @@ import ItemList from "./ItemList";
 import Category from "../../../routes/views/Category";
 
 
-const ItemListContainer = ({productos}) => {
+const ItemListContainer = () => {
   const [state,setState] = useState([]) 
- 
+
   
   const getData = async () =>{
     const productosDb = collection(db,"productos")
@@ -26,7 +26,7 @@ const ItemListContainer = ({productos}) => {
 
   useEffect(() => {
     getData()
-   
+    
   },[]);
 
   return (

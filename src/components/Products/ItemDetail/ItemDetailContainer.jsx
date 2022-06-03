@@ -3,7 +3,7 @@ import { useParams } from "react-router";
 import ItemDetail from "./ItemDetail";
 import { db } from "../../../services/firebase";
 import { collection, getDocs } from "firebase/firestore";
-import { Spinner } from "react-bootstrap";
+
 const ItemDetailContainer = () => {
 
   
@@ -30,7 +30,7 @@ const ItemDetailContainer = () => {
   
   useEffect(() => {
     getData()
-    console.log(productos)
+    
   },[id]);
 
 

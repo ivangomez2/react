@@ -1,9 +1,11 @@
 import { addDoc, collection, getFirestore } from 'firebase/firestore';
 import React, { useContext, useEffect, useState } from 'react'
 import { cartContextCont } from '../../../context/CartContext';
+import "./BuyForm.css"
+
 
 const BuyForm = () => {
-   const {carrito}= useContext(cartContextCont)
+   const {carrito,setCarrito}= useContext(cartContextCont)
    const [ordering,setOrder] = useState("")
    const [formData , setFormData] = useState ({
        buyer:{email:"",nombre:"",apellido:"",telefono:""}, items:carrito
@@ -26,6 +28,8 @@ const BuyForm = () => {
      buyer: {...formData.buyer, [name] : value}})
      
 }
+
+
  
     const sendOrder = (e) =>{
       
@@ -35,16 +39,17 @@ const BuyForm = () => {
       const db = getFirestore();
       const orderColl = collection(db,"ordering")
       addDoc(orderColl,order).then(({id}) =>setOrder(id)).catch (err=>{console.log(err)})
-      console.log("creado")
-      
+      //reseteamos los valores del form al darle submit
+      let formulario = e.target
+      formulario.reset();
       e.preventDefault();
     }
     
     
 
   return (
-    <div>
-        <form onSubmit={sendOrder}>
+    <div className='buyForm__container'>
+        <form className='buyForm__Formcontainer' onSubmit={sendOrder}>
             <h4>Validar Compra</h4>
             <p>Recibirás al mail los detalles de tu compra</p>
             
@@ -60,7 +65,7 @@ const BuyForm = () => {
             <label htmlFor="telefono">Telefono</label>
             <input id='telefono' name='telefono' onChange={(handleChange)} type="number"  required/>
 
-            <button type='submit' formAction='submit'> enviar </button>
+            <button className='btn btn-info' type='submit' formAction='submit'> enviar </button>
         </form>
     </div>
   )

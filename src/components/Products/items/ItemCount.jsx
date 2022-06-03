@@ -1,18 +1,22 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { cartContextCont } from "../../../context/CartContext";
 import { GlobalContext } from "../../../context/GlobalStateContext";
-
-const ItemCount = ({ handleClick, Stock, itemCarro }) => {
+const ItemCount = ({ Stock, itemCarro }) => {
   const { agregarAlCarro, isInCart } = useContext(cartContextCont);
   const { cantidad, setCantidad } = useContext(GlobalContext);
-
+ 
+ 
  ///ACA ES DONDE SE SUMAN Y RESTAN LOS PRODUCTOS
+ 
 
   const count = (e) => {
     //TOMO EL VALOR DEL INPUT Y LO SETEO EN LA CANTIDAD
    setCantidad(e.target.value)
   };
+  
+  
+
 
   return (
     <>
@@ -22,7 +26,7 @@ const ItemCount = ({ handleClick, Stock, itemCarro }) => {
     
     {isInCart(itemCarro.id) ? 
     (<Link to={"/cart"} className="btn btn-success text-light"> <button className="btn btn-success text-light mt-2">Terminar Compra 💸</button> </Link>) 
-    : (<input onClick={count} type={"number"} min={"1"} max={Stock} defaultValue="1" ></input>)}
+    : (<input onClick={count} type={"number"} min={"1"} max={Stock} defaultValue={1} ></input>)}
           </div>
           
           {!isInCart(itemCarro.id) && 

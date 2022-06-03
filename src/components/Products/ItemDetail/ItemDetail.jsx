@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const ItemDetail = ({ productos, productosFilt }) => {
   // usada para agregar mis productos al carr
-  const { quantityToAdd, cantidad, setCantidad } = useContext(GlobalContext);
+  const { quantityToAdd} = useContext(GlobalContext);
 
 
   return (

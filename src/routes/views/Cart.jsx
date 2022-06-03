@@ -19,11 +19,11 @@ const {carrito,deleteAll,deleteOne,precio}= useContext(cartContextCont)
     
     return (
     <div className='mt-4 w-100 p-4'>
-      <div className='card'>
+      <div className='cart__tableFormCont'>
 
 {/*Se encarga de mostrar la tabla solo si hay productos*/} 
  {carrito.length > 0 && 
-  <Table className='cart__table' striped bordered hover variant="info">
+  <Table className='cart__table' striped bordered hover size="sm">
   <thead>
     <tr>
       <th>#</th>
@@ -46,10 +46,11 @@ const {carrito,deleteAll,deleteOne,precio}= useContext(cartContextCont)
       </tr>})}
   </tbody>
 </Table>} 
+{carrito.length > 0 &&
+<BuyForm/>}
 </div>
-
      {/*Si el carrito está vacio */}     
-     {carrito.length <= 0 ? <div className='mt-3' >
+     {carrito.length <= 0 ? <div className='cart__noProducts' >
      <h5 className="sr-only">Aquí no hay productos...</h5>
      <Link to={"/Services/MarketShop"}>
       <button className='btn btn-info text-light'>Tienda 🛒</button>
@@ -59,10 +60,10 @@ const {carrito,deleteAll,deleteOne,precio}= useContext(cartContextCont)
      <button className='btn btn-danger text-light' onClick={deleteAll}> Eliminar Todo</button>
      <Link to={"/Services/MarketShop"}>
      <button className='btn btn-info text-light'>Seguir comprando</button>
+     
      </Link>
-     <BuyForm/>
      </div>
-         }
+     }
   
         
     </div>

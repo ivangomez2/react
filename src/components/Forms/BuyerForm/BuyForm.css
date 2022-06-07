@@ -1,14 +1,28 @@
 .buyForm__Formcontainer {
   display: flex;
+  border: solid 1px rgba(128, 128, 128, 0.387);
+  color: black;
+  font-weight: 600;
   flex-direction: column;
   padding: 10px;
   border-radius: 10px;
+}
+.buyForm__titles{
+  border-bottom: solid 1px rgba(128, 128, 128, 0.387);
+  text-align: center;
+  padding: 5px;
 }
 
 .buyForm__Formcontainer input {
   width: 230px;
   margin: 0 auto;
   margin-bottom: 10px;
-  border-radius: 7px;
   border: solid 1px rgba(128, 128, 128, 0.532);
+}
+
+.buyForm__Formcontainer button{
+  border-top: 1px gray solid;
+  margin-top: 10px;
+color: white;
+font-weight: 600;
 }

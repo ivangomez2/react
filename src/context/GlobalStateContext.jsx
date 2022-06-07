@@ -4,7 +4,7 @@ export const GlobalContext = createContext("")
 const GlobalStateContext = ({children}) => {
     //ACA TENGO MI CANTIDAD
     const [cantidad, setCantidad] = useState(1);
-    const [cantidadComprada, setCantidadComprada] = useState(0);
+    const [cantidadComprada, setCantidadComprada] = useState(1);
     
     const quantityToAdd = (cantidad) => {
       setCantidadComprada(cantidad);

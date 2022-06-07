@@ -19,12 +19,12 @@ const Rutas = () => {
      
    <Route index element={<Home/>} />
   {/* <Route path="/Prueba/:id" element={<Services/>}/>*/}
-  <Route path="/Cart" element={<Cart/>}/>
   <Route path="/" element={<ItemListContainer/>}/>
-  <Route path="/Item/:id" element={<ItemDetailContainer/>}/>
   <Route path="/Category/:category" element={<Category/>}/>
 {/* <Route path="/Prueba/:id" element={<Services/>}/>*/}
   </Route>
+  <Route path="/Item/:id" element={<ItemDetailContainer/>}/>
+  <Route path="/Cart" element={<Cart/>}/>
   <Route path="/Services/" element={<Services/>}/>
   <Route path="/Services/MarketShop" element={<MarketShop/>}/>
     </Routes>

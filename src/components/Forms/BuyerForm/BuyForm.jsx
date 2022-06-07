@@ -5,10 +5,10 @@ import "./BuyForm.css"
 
 
 const BuyForm = () => {
-   const {carrito,setCarrito}= useContext(cartContextCont)
+   const {carrito,costoTotal}= useContext(cartContextCont)
    const [ordering,setOrder] = useState("")
    const [formData , setFormData] = useState ({
-       buyer:{email:"",nombre:"",apellido:"",telefono:""}, items:carrito
+       buyer:{email:"",nombre:"",apellido:"",telefono:""}, items:carrito,total:costoTotal()
     })
 
     const createTkt = (order)=>{
@@ -50,9 +50,10 @@ const BuyForm = () => {
   return (
     <div className='buyForm__container'>
         <form className='buyForm__Formcontainer' onSubmit={sendOrder}>
+          <div className='buyForm__titles'>
             <h4>Validar Compra</h4>
             <p>Recibirás al mail los detalles de tu compra</p>
-            
+            </div>
             <label htmlFor="email">Email</label>
             <input name='email' id='email' onChange={(handleChange)} type="email"  required />    
             
@@ -65,7 +66,7 @@ const BuyForm = () => {
             <label htmlFor="telefono">Telefono</label>
             <input id='telefono' name='telefono' onChange={(handleChange)} type="number"  required/>
 
-            <button className='btn btn-info' type='submit' formAction='submit'> enviar </button>
+            <button className='btn btn-dark' type='submit' formAction='submit'> Enviar </button>
         </form>
     </div>
   )

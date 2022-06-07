@@ -1,10 +1,10 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import {React} from "react";
 import "./Item.css"
 import { getDocs,collection } from "firebase/firestore";
 import { db } from "../../../services/firebase";
 import ItemList from "./ItemList";
-import Category from "../../../routes/views/Category";
+
 
 
 const ItemListContainer = () => {

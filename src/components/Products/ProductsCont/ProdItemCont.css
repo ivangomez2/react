@@ -53,6 +53,40 @@
 
 }
 
+@media (max-width:450px){
+  .ProdItem__cont{
+   width: 302px !important;
+   height: 340px;
+   
+  }
+
+  .ProdItem__cont p{
+  color: gray;
+     
+    }
+  
+  .ProdItem__cont button{
+   border: solid 1px black;
+    
+   }
+  
+}
+
+@media (max-width:345px){
+  .ProdItem__cont{
+   width: 240px !important;
+   height: 370px;
+   
+  }
+
+  .ProdItem__cont p{
+    width: fit-content !important;
+     }
+   
+
+  
+}
+
 .ProdItem__cont{
 
     display: flex;

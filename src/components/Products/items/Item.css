@@ -23,6 +23,11 @@
   }
 }
 
+.item__footer{
+ position: relative;
+ top: 160px;
+}
+
 @media (max-width: 700px) {
   .itemCont {
     display: grid;
@@ -45,6 +50,15 @@
     background-color: #0697bb;
     color: white;
     margin-top: 55px;
+  }
+}
+
+@media (max-width: 350px){
+  .card{
+    width: 230px !important;
+  }
+  .dropDownPos{
+    width: 160px;
   }
 }
 

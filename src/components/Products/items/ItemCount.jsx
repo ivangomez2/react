@@ -20,7 +20,7 @@ const ItemCount = ({ Stock, itemCarro }) => {
 
   return (
     <>
-      <div className="text-dark fs-5">
+      <div className>
         
      <div>
     

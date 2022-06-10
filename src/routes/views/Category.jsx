@@ -7,6 +7,8 @@ import { collection, getDocs } from 'firebase/firestore'
 import ItemList from '../../components/Products/items/ItemList'
 import {Dropdown,Spinner} from "react-bootstrap"
 import { NavLink } from 'react-router-dom'
+import Footer from '../../components/Nav-Footer/Footer/Footer'
+import NavBar from '../../components/Nav-Footer/NavBar/NavBar'
 
 
 
@@ -38,6 +40,7 @@ const Category = () => {
   
   return (
     <div>
+      <NavBar/>
     <Sidebar/>
 <div class="content">
     <div className="mt-5">
@@ -59,7 +62,9 @@ const Category = () => {
 </Dropdown>
      
         <ItemList state={filtro} /> 
- 
+ <div className='item__footer'>
+    <Footer/>
+    </div>
       </div>
     </div>
     </div>

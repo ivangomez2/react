@@ -37,8 +37,6 @@ const ProductContContainer = () => {
     })
       .then((res) => addParams(res))
       .catch((err) => console.log(err));
-
-    console.log(promesa);
   }, []);
 
   return (

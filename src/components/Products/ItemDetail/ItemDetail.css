@@ -1,5 +1,107 @@
+.itemDetail__Mobile {
+  display: none;
+}
+
+@media (max-width: 1060px) {
+  .itemDetail__img {
+    height: 420px;
+    padding: 10px;
+  }
+
+  .itemDetail__content {
+    margin: 0 auto !important;
+  }
+
+  .sidebarShow {
+    display: none;
+  }
+  .navBarShow {
+    display: block !important;
+    margin-bottom: 30px;
+  }
+
+  .detailCheck {
+    margin: 0 auto !important;
+
+    text-align: center;
+  }
+}
+
+@media (max-width: 450px) {
+  .itemDetail__imgCont {
+    flex-direction: column;
+  }
+
+  .itemDetail__miniImgCont {
+    flex-direction: row !important;
+    margin: 0;
+  }
+
+  .itemDetail__miniImgCont h4 {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .itemDetail__img {
+    width: 230px;
+  }
+
+  .itemDetail__miniImg {
+    margin: 0px !important;
+  }
+}
+
+@media (max-width: 708px) {
+  .itemDetail__Mobile {
+    display: block;
+  }
+
+  .itemDetail__Content {
+    display: flex;
+    flex-direction: column;
+  }
+  .itemDetail__miniImgCont {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    margin-bottom: 30px;
+  }
+
+  .itemDetail__imgCont {
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+    margin: 0px !important;
+  }
+
+  .itemDetail__miniImg {
+    margin-right: 13px;
+    margin-bottom: 10px;
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  .detailCheck {
+    display: none;
+  }
+
+  .itemDetail__img {
+    height: 420px !important;
+    padding: 10px !important;
+    border-radius: 6px;
+    margin-bottom: 20px;
+  }
+}
+
 .content {
   margin-bottom: 40px;
+}
+
+.navBarShow {
+  display: none;
 }
 
 .itemDetail__price {
@@ -43,15 +145,19 @@
   color: #0697bb;
 }
 
-.itemDetail__list{
+.itemDetail__list {
   list-style-type: none;
   font-weight: 600;
   color: #0697bb;
+}
+.itemDetail__Responsive {
+  display: none;
 }
 
 .itemDetail__img {
   height: 520px;
   border-radius: 10px;
+  padding: 15px;
   box-shadow: -3px 5px 31px 0px rgba(0, 0, 0, 0.87);
   -webkit-box-shadow: -3px 5px 31px 0px rgba(0, 0, 0, 0.87);
   -moz-box-shadow: -3px 5px 31px 0px rgba(0, 0, 0, 0.87);

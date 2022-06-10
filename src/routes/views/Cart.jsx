@@ -5,7 +5,7 @@ import BuyForm from "../../components/Forms/BuyerForm/BuyForm";
 import { cartContextCont } from "../../context/CartContext";
 import "../../index.css";
 import banner from "../../imgs/banner.png";
-import GlobalStateContext, { GlobalContext } from "../../context/GlobalStateContext";
+
 
 const Cart = () => {
   const { setCarrito,carrito, deleteAll, deleteOne, costoTotal } = useContext(cartContextCont);
@@ -68,7 +68,7 @@ useEffect(() => {
                       <td className="Cart__Img">
                         <img src={prod.img} /> {prod.nombre}
                       </td>
-                      <td><input key={index} onChange={pricing} type="number" min={1} max={prod.Stock} defaultValue={cantidad} /></td>
+                      <td><input key={index} onChange={pricing} type="number" min={1} max={prod.Stock} defaultValue={prod.cantidad} /></td>
                       <td> €{prod.precio}</td>
                       <td onClick={() => deleteOne(prod.id)}>✖</td>
                     </tr>

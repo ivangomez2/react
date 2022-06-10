@@ -1,4 +1,8 @@
 @media (max-width: 880px) {
+  .header{
+    flex-direction: column;
+  }
+
   .contactImgs {
     display: none !important;
   }

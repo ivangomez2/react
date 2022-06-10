@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import ItemDetail from "./ItemDetail";
 import { db } from "../../../services/firebase";
 import { collection, getDocs } from "firebase/firestore";
+import NavBar from "../../Nav-Footer/NavBar/NavBar";
 
 const ItemDetailContainer = () => {
 
@@ -35,7 +36,8 @@ const ItemDetailContainer = () => {
 
 
   return (
-    <div> <ItemDetail productos={productos} productosFilt={productosFilt} /> </div>
+    <div> <ItemDetail productos={productos} productosFilt={productosFilt} />
+      </div>
   );
 };
 

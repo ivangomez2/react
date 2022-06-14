@@ -65,22 +65,9 @@ const NavBar = () => {
                 Servicios Adicionales
               </NavLink>
 
-            
-
                 <img className="iconImgNav" src={img} alt="" />
             </li>
           </ul>
-          <form className="d-flex">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-outline-info text-light" type="submit">
-              Search
-            </button>
-          </form>
         </div>
       </div>
     </nav>

@@ -22,10 +22,9 @@
     font-weight: 600;
   }
 }
-.itemCount__responsiveButtons{
+.itemCount__responsiveButtons {
   display: none;
 }
-
 
 @media (max-width: 700px) {
   .itemCont {
@@ -50,44 +49,37 @@
     color: white;
     margin-top: 55px;
   }
-
-
 }
-@media (max-width: 400px){
-  .itemCount__responsiveInput{
+@media (max-width: 450px) {
+  .itemCount__responsiveInput {
     display: none;
   }
-  .itemCount__responsiveButtons{
+  .itemCount__responsiveButtons {
     display: grid;
     align-items: center;
     width: 100px;
-    grid-template-columns: 1fr 1fr 1fr;    
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .itemCount__responsiveButtons p{
-   margin: 0 auto;
- 
-   
+  .itemCount__responsiveButtons p {
+    margin: 0 auto;
   }
 
-  .itemCount{
+  .itemCount {
     width: 100px;
   }
-  .itemCount__btn{
+  .itemCount__btn {
     width: 40px;
   }
-
 }
 
-@media (max-width: 350px){
-  .card{
+@media (max-width: 350px) {
+  .card {
     width: 230px !important;
   }
-  .dropDownPos{
+  .dropDownPos {
     width: 160px;
   }
-
-
 }
 
 .dropDownPos {
@@ -114,7 +106,6 @@
 .cardConts:hover {
   transform: translateY(-20px);
   opacity: 0.9;
-  
 }
 
 .card-text {
@@ -137,4 +128,3 @@
   color: whitesmoke;
   font-weight: 500;
 }
-

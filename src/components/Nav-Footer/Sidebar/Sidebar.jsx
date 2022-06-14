@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./Sidebar.css";
-import menu from "../../../imgs/menu.png"
+import menu from "../../../imgs/ecommerce.png"
 
 const Sidebar = () => {
   return (

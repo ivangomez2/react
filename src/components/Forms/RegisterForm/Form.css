@@ -2,10 +2,15 @@
   .regForm {
     width: 340px !important;
   }
+  
 
   .FormTitleClass {
     width: 300px !important;
   }
+}
+
+.home__imgContact{
+  width: 502px !important;
 }
 
 @media (max-width: 380px) {
@@ -20,6 +25,10 @@
 @media (max-width: 801px) {
   .regForm {
     margin-top: 15px !important;
+  }
+
+  .regForm h3{
+    text-align: center !important;
   }
 
   .FormTitleClass {

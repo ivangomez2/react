@@ -5,9 +5,9 @@ import "../../components/Forms/ContactForm/Contact.css";
 import ImgTextCont from "../../components/SectTextImg/ImgTextCont";
 import DivBar from "../../components/DivBar/DivBar";
 import TextTitles from "../../components/Text-titles/TextTitles";
-import Form from "../../components/Forms/RegisterForm/Form";
 import ContactUs from "../../components/Forms/ContactForm/Contact";
-
+import formImg from "../../imgs/EcommerceFormLogo.png"
+import img from "../../imgs/mp.jpg"
 const Home = () => {
   return (
     <>
@@ -19,19 +19,9 @@ const Home = () => {
           h1={"Creamos tu tienda online"}
           h4=" Digitalizá tu marca en muy simples pasos con diseño a tu medida."
         />
-        <Form
-          formclass={"regForm"}
-          FormTitle={"Registro"}
-          FormTitleClass={"FormTitleClass"}
-          text1={"Nombre"}
-          text2={"Email"}
-          text3={"Contraseña"}
-          checkboxP={"¿Aceptas los T&C del servicio?"}
-          btnclass={"btn btn-black text-light"}
-          btnText="Registrarse"
-        />
+       <img className="home__imgTitle" src={img} alt="" />
       </div>
-
+    
       <DivBar
       PClass={"divBar__desktopView"}
       MobileClass={"divBar__mobileView"}
@@ -83,6 +73,10 @@ const Home = () => {
         </div>
 
         <ContactUs />
+        <div className="home__contactoImgText">
+        <img className="home__imgContacts" src={formImg}  />
+        <blockquote>Dejanos tú mensaje y nos comunicaremos a la brevedad</blockquote>
+        </div>
       </div>
     </>
   );

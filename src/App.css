@@ -4,6 +4,8 @@
     
 }
 
+
+
 *{margin: 0 auto;
 border-style: border-box;}
 
@@ -28,5 +30,39 @@ border-style: border-box;}
     }
 }
 
+.services__imgs{
+    display: none;
+}
+
+.services__content{
+    display: flex;
+    margin-top: 30px;
+    height: 500px !important;
+}
+
+@media(max-width:1238px){
+    .services__content{
+        display: block ;
+        height: 600px !important;
+    }
+}
+
+@media (max-width:940px) {
+    .services__sidebar{
+        display: none;
+    }
+
+   .services__content{
+    
+        margin-left: -50px !important;
+        height: 600px !important;
+    }
+}
+@media (max-width:580px) {
+    .services__imgs{
+        display: block;
+        width: 100%;
+    }
+}
 
 

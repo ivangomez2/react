@@ -8,11 +8,13 @@ const DivBar = ({Title1, p1, Title2, p2, Title3, p3,TitleClass,PClass,p1Mobile,p
         <p className={`${PClass}`}>{p1}</p>
         <p className={MobileClass}>{p1Mobile}</p>
       </div>
+       
       <div>
         <h3 className={TitleClass} >{Title2}</h3>
         <p  className={`${PClass}`}>{p2}</p>
         <p className={MobileClass}>{p2Mobile}</p>
       </div>
+      
       <div>
         <h3 className={TitleClass} >{Title3}</h3>
         <p className={`${PClass}`}>{p3}</p>

@@ -12,10 +12,15 @@
   }
 }
 
+
+
 @media (max-width: 550px) {
   .ContactCont {
     width: 380px !important;
   }
+.home__contactoImgText{
+ display: none;
+}
 }
 
 @media (max-width: 440px) {
@@ -52,14 +57,21 @@
   }
 }
 
+.home__contactoImgText{
+  text-align: center;
+  margin: 0 auto !important;
+  width: 200px;
+  color: rgb(38, 38, 38);
+  font-weight: 500;
+}
+
 .ContactCont {
-  width: 500px;
-  background-color: whitesmoke;
+  width: 350px;
+  background-color: rgba(255, 255, 255, 0.633);
   border: solid 1px white;
   border-radius: 5px;
-  margin-left: -100px;
-  -webkit-box-shadow: 5px 5px 13px 5px #000000;
-  box-shadow: 5px 5px 13px 5px #000000;
+  margin-left: -70px;
+ padding-top: 10px;
 }
 
 .contactBg {
@@ -76,6 +88,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 
 .contactImgs {
   height: 500px;
@@ -116,7 +129,13 @@
 }
 
 .ContactCont label {
-  width: 350px;
+  width: 245px;
+  font-weight: 500;
+  color: #0697bb;
+}
+
+.ContactCont input {
+  width: 250px !important;
   font-weight: 500;
   color: #0697bb;
 }
@@ -129,7 +148,7 @@
 textarea {
   border: 1px rgba(128, 128, 128, 0.507) solid;
   border-radius: 5px;
-  width: 350px;
+  width: 250px;
   margin: 0 auto;
 }
 
@@ -137,4 +156,25 @@ textarea {
   background-color: #0697bb;
   color: white;
   font-weight: 500;
+}
+
+
+
+.home__imgContacts{
+  width: 102px !important;
+}
+
+.home__imgTitle{
+  width: 500px;
+  height: 280px;
+  margin-top: 40px;
+  border: solid 1px #0697bb;
+  border-radius: 30px;
+}
+
+@media(max-width:879px){
+  .home__imgTitle{
+display: none;
+   
+  }
 }

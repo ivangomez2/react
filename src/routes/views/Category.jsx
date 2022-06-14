@@ -63,10 +63,10 @@ const Category = () => {
      
         <ItemList state={filtro} /> 
  <div className='item__footer'>
-    <Footer/>
     </div>
       </div>
     </div>
+    <Footer/>
     </div>
   );
 }

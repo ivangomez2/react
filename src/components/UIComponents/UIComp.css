@@ -1,0 +1,22 @@
+.carrousel__cont {
+  width: 630px;
+
+  height: 400px;
+}
+
+.carrousel__img {
+  border-radius: 10px;
+}
+
+@media (max-width: 790px) {
+  .carrousel__cont {
+    width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 580px) {
+  .carrousel__cont {
+    display: none;
+  }
+}

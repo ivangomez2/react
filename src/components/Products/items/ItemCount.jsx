@@ -75,7 +75,11 @@ const ItemCount = ({ Stock, itemCarro }) => {
             </>
           )}
 
-          {!isInCart(itemCarro.id) && (
+        
+        </div>
+        
+      </div>
+      {!isInCart(itemCarro.id) && (
             <button
               onClick={() => agregarAlCarro({ cantidad, ...itemCarro })}
               className="btn itemCount text-light mt-2"
@@ -84,8 +88,6 @@ const ItemCount = ({ Stock, itemCarro }) => {
               Agregar al carrito 🛒
             </button>
           )}
-        </div>
-      </div>
     </>
   );
 };

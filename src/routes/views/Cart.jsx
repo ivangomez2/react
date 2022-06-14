@@ -55,7 +55,7 @@ useEffect(() => {
                 <th>Producto</th>
                 <th>Cantidad</th>
                 <th>Precio</th>
-                <th>Borrar</th>
+                <th className="cart__responsive">Borrar</th>
               </tr>
             </thead>
 
@@ -68,9 +68,9 @@ useEffect(() => {
                       <td className="Cart__Img">
                         <img src={prod.img} /> {prod.nombre}
                       </td>
-                      <td><input key={index} onChange={pricing} type="number" min={1} max={prod.Stock} defaultValue={prod.cantidad} /></td>
+                      <td>{prod.cantidad}</td>
                       <td> €{prod.precio}</td>
-                      <td onClick={() => deleteOne(prod.id)}>✖</td>
+                      <td className="cart__responsive" onClick={() => deleteOne(prod.id)}>✖</td>
                     </tr>
                   );
                 })}

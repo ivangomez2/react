@@ -22,7 +22,9 @@
     font-weight: 600;
   }
 }
-
+.itemCount__responsiveButtons{
+  display: none;
+}
 
 
 @media (max-width: 700px) {
@@ -48,6 +50,33 @@
     color: white;
     margin-top: 55px;
   }
+
+
+}
+@media (max-width: 400px){
+  .itemCount__responsiveInput{
+    display: none;
+  }
+  .itemCount__responsiveButtons{
+    display: grid;
+    align-items: center;
+    width: 100px;
+    grid-template-columns: 1fr 1fr 1fr;    
+  }
+
+  .itemCount__responsiveButtons p{
+   margin: 0 auto;
+   margin-left: -35px;
+   
+  }
+
+  .itemCount{
+    width: 100px;
+  }
+  .itemCount__btn{
+    width: 40px;
+  }
+
 }
 
 @media (max-width: 350px){
@@ -57,6 +86,8 @@
   .dropDownPos{
     width: 160px;
   }
+
+
 }
 
 .dropDownPos {

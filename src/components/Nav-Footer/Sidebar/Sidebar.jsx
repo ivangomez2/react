@@ -5,6 +5,7 @@ import menu from "../../../imgs/ecommerce.png"
 
 const Sidebar = () => {
   return (
+    
     <div className="sidebar">
      <img className="sidebar__menu" src={menu} alt="" />
       <nav>
@@ -59,7 +60,9 @@ const Sidebar = () => {
           <p>Nuestras redes.</p>
         </div>
         <div>
-          <button className="Chat">Contácto 📫</button>
+          <Link className="Sidebar__contact" to={"/"} href="x">
+          <button  className="Chat">Contácto 📫</button>
+          </Link>
           <p>Envíanos un E-Mail</p>
           </div>
         </div>

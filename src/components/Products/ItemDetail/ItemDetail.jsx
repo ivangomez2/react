@@ -16,11 +16,10 @@ const ItemDetail = ({ productos, productosFilt }) => {
   return (
     <>
       <div className="sidebarShow">
-        <Sidebar />{" "}
+        <Sidebar />
       </div>
       <div className="navBarShow">
-        {" "}
-        <NavBar />{" "}
+        <NavBar />
       </div>
       <div className="itemDetail__content  content ">
         {productos.id > 0 ? (
@@ -29,10 +28,10 @@ const ItemDetail = ({ productos, productosFilt }) => {
               <img className="itemDetail__img" src={productos.img} alt="" />
               <div className="itemDetail__miniImgCont">
                 <h4 style={{ color: "gray" }}>Similares</h4>
-                {productosFilt.map((item) => {
+                {productosFilt.map((item,index) => {
                   return (
                     <Link to={`/Item/${item.id}`}>
-                      <img className="itemDetail__miniImg" src={item.img} />
+                      <img key={index} className="itemDetail__miniImg" src={item.img} />
                     </Link>
                   );
                 })}

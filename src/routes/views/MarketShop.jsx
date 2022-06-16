@@ -12,7 +12,7 @@ const MarketShop = () => {
     <div>
     <NavBar/>
    <Sidebar/>
- <div class="content">
+ <div className="content">
  <h1 className='titleProds'>Productos</h1>
 
 

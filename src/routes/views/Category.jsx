@@ -42,7 +42,7 @@ const Category = () => {
     <div>
       <NavBar/>
     <Sidebar/>
-<div class="content">
+<div className="content">
     <div className="mt-5">
  <Dropdown className='dropDownPos'>
   <Dropdown.Toggle className='text-light' variant="info" id="dropdown-basic">

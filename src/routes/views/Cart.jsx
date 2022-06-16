@@ -11,7 +11,7 @@ const Cart = () => {
   const { setCarrito,carrito, deleteAll, deleteOne, costoTotal } = useContext(cartContextCont);
   const [cantidad,setCantidad] = useState()
    
- 
+  console.log(carrito)
   
   const pricing = (e) =>{
 
@@ -91,7 +91,6 @@ useEffect(() => {
       ) : (
         <div className="Cart__buttonsCont">
           <button className="btn btn-danger text-light" onClick={deleteAll}>
-            {" "}
             Eliminar Todo
           </button>
           <Link to={"/Services/MarketShop"}>

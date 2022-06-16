@@ -17,7 +17,7 @@ const Services = () => {
         </h1>
         <img src={slideTwo} className="services__imgs"/>
         
-      <div class="content services__content">
+      <div className="content services__content">
        
         <Carrousel
           img={slideOne}

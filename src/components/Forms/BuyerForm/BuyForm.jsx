@@ -5,7 +5,7 @@ import "./BuyForm.css"
 
 
 const BuyForm = () => {
-   const {carrito,costoTotal}= useContext(cartContextCont)
+   const {carrito,costoTotal,deleteAll,setCarrito}= useContext(cartContextCont)
    const [ordering,setOrder] = useState("")
    const [formData , setFormData] = useState ({
        buyer:{email:"",nombre:"",apellido:"",telefono:""}, items:carrito,total:costoTotal()
@@ -13,7 +13,8 @@ const BuyForm = () => {
 
     const createTkt = (order)=>{
       if(order){
-      alert(`tu numero de ticket es ${ordering}`)}
+      alert(`tu numero de ticket es ${ordering}`)
+      deleteAll()}
     }
    
     useEffect(() => {
@@ -42,8 +43,11 @@ const BuyForm = () => {
       //reseteamos los valores del form al darle submit
       let formulario = e.target
       formulario.reset();
+    
+   
       e.preventDefault();
     }
+
     
     
 

@@ -14,9 +14,10 @@ const NavBar = () => {
       style={{ backgroundColor: "#0697bb" }}
       className="navbar navbar-expand-lg navbar-dark fixed-top"
     >
-      <div className="container-fluid">
+      <div className="navbar__separate container-fluid">
         <NavLink to={`/`} className="navbar-brand text-light">
           Ecommerce
+        <img className="iconImgNav" src={img} alt="" />
         </NavLink>
         { carrito.length > 0 ? (
           <Link to={"/Cart"}>
@@ -39,7 +40,7 @@ const NavBar = () => {
         <div className="collapse navbar-collapse " id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 navSpace ">
             <li className="nav-item">
-              <NavLink to={`/Services/`} className="navbar-brand text-light">
+              <NavLink  to={`/Services/`} className="navbar-brand text-light active">
                   Información
               </NavLink>
             </li>
@@ -65,7 +66,7 @@ const NavBar = () => {
                 Servicios Adicionales
               </NavLink>
 
-                <img className="iconImgNav" src={img} alt="" />
+         
             </li>
           </ul>
         </div>
